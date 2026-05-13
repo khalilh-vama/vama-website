@@ -916,19 +916,22 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   gap: 10px;
   flex-wrap: wrap;
 }
+.oc-bottom-left {
+  flex: 1;
+}
 .oc-ghost-btn {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 13px; font-weight: 500;
-  color: rgba(255,255,255,0.75);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 8px;
-  padding: 9px 16px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 100px;
+  padding: 12px 22px;
   text-decoration: none;
   background: transparent;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 .oc-ghost-btn:hover {
-  border-color: rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,0.7);
   color: #ffffff;
 }
 .oc-stats {
