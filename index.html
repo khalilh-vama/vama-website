@@ -587,151 +587,176 @@
   </div>
 </section>
 
-<!-- OpenClaw animated tiles -->
-<section class="section section-light" style="display:flex;flex-direction:column;align-items:center;gap:48px;">
-  <div class="section-header">
-    <span class="pill">OpenClaw</span>
-    <h2 class="section-title" style="text-align:center;white-space:nowrap;">One chat. Everything handled.</h2>
-    <p class="section-sub">Your personal OpenClaw agent lives in your contacts. Just ask — it handles the rest.</p>
-  </div>
-  <div class="screenshots-grid">
-    <div class="screenshot-item">
-      <div class="shell" id="p1">
-        <div class="phone-bar">
-          <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
-          <div><div class="bar-name">OpenClaw</div><div class="bar-sub">Vama Agent</div></div>
-        </div>
-        <div class="chat-bg">
-          <div class="cal-header"><div class="cal-month">May 2026</div><div class="cal-nav">‹ ›</div></div>
-          <div class="cal-grid">
-            <div class="cal-day-label">M</div><div class="cal-day-label">T</div><div class="cal-day-label">W</div><div class="cal-day-label">T</div><div class="cal-day-label">F</div><div class="cal-day-label">S</div><div class="cal-day-label">S</div>
-            <div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div>
-            <div class="cal-day">1</div><div class="cal-day has-event">2</div><div class="cal-day">3</div><div class="cal-day">4</div>
-            <div class="cal-day">5</div><div class="cal-day has-event">6</div><div class="cal-day">7</div>
-            <div class="cal-day today has-event">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div>
-            <div class="cal-day has-event">12</div><div class="cal-day">13</div><div class="cal-day">14</div>
-            <div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day has-event">17</div><div class="cal-day">18</div>
-          </div>
-          <div class="event-list" style="margin-top:8px">
-            <div class="event-item" id="ev1"><div class="event-dot" style="background:#0071EE"></div><div><div class="event-title">Team Sync</div><div class="event-time">Thu · 2:00 PM</div></div><div class="event-new-badge">NEW</div></div>
-            <div class="event-item" id="ev2"><div class="event-dot" style="background:#22c55e"></div><div><div class="event-title">1:1 with Marcus</div><div class="event-time">Fri · 10:00 AM</div></div><div class="event-new-badge">NEW</div></div>
-            <div class="event-item" id="ev3"><div class="event-dot" style="background:#f59e0b"></div><div><div class="event-title">Design Review</div><div class="event-time">Mon · 9:30 AM</div></div><div class="event-new-badge">NEW</div></div>
-          </div>
-        </div>
-        <div class="input-bar">
-          <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
-          <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
-        </div>
-      </div>
-      <p class="screenshot-label">Managing Calendar</p>
+<!-- Unified OpenClaw section -->
+<section class="oc-unified">
+  <div class="oc-inner">
+
+    <div style="text-align:center;">
+      <span class="oc-eyebrow">Powered by OpenClaw</span>
+      <h2 class="oc-headline">One chat. Everything handled.</h2>
+      <p class="oc-subhead">Your personal OpenClaw agent lives in your contacts. Ask it anything — it manages your calendar, drafts emails, books flights, and automates your life.</p>
     </div>
-    <div class="screenshot-item">
-      <div class="shell" id="p2">
-        <div class="phone-bar">
-          <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
-          <div><div class="bar-name">OpenClaw</div><div class="bar-sub">Vama Agent</div></div>
-        </div>
-        <div class="chat-bg">
-          <div class="boarding-pass" id="bp">
-            <div class="bp-header">
-              <div class="bp-airline">British Airways · BA 178</div>
-              <div class="bp-flight">Economy · Non-stop</div>
-              <div class="bp-route">
-                <div><div class="bp-city">JFK</div><div class="bp-city-name">New York</div></div>
-                <div class="bp-arrow">✈</div>
-                <div style="text-align:right"><div class="bp-city">LHR</div><div class="bp-city-name">London</div></div>
+
+    <div class="oc-tiles-grid">
+
+      <div class="oc-tile">
+        <div class="oc-tile-img">
+          <div style="transform:scale(0.56);transform-origin:top center;">
+            <div class="shell" id="p1">
+              <div class="phone-bar">
+                <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+                <div><div class="bar-name">OpenClaw</div><div class="bar-sub">Vama Agent</div></div>
+              </div>
+              <div class="chat-bg">
+                <div class="cal-header"><div class="cal-month">May 2026</div><div class="cal-nav">&#x2039; &#x203a;</div></div>
+                <div class="cal-grid">
+                  <div class="cal-day-label">M</div><div class="cal-day-label">T</div><div class="cal-day-label">W</div><div class="cal-day-label">T</div><div class="cal-day-label">F</div><div class="cal-day-label">S</div><div class="cal-day-label">S</div>
+                  <div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div>
+                  <div class="cal-day">1</div><div class="cal-day has-event">2</div><div class="cal-day">3</div><div class="cal-day">4</div>
+                  <div class="cal-day">5</div><div class="cal-day has-event">6</div><div class="cal-day">7</div>
+                  <div class="cal-day today has-event">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div>
+                  <div class="cal-day has-event">12</div><div class="cal-day">13</div><div class="cal-day">14</div>
+                  <div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day has-event">17</div><div class="cal-day">18</div>
+                </div>
+                <div class="event-list" style="margin-top:8px">
+                  <div class="event-item" id="ev1"><div class="event-dot" style="background:#0071EE"></div><div><div class="event-title">Team Sync</div><div class="event-time">Thu &middot; 2:00 PM</div></div><div class="event-new-badge">NEW</div></div>
+                  <div class="event-item" id="ev2"><div class="event-dot" style="background:#22c55e"></div><div><div class="event-title">1:1 with Marcus</div><div class="event-time">Fri &middot; 10:00 AM</div></div><div class="event-new-badge">NEW</div></div>
+                  <div class="event-item" id="ev3"><div class="event-dot" style="background:#f59e0b"></div><div><div class="event-title">Design Review</div><div class="event-time">Mon &middot; 9:30 AM</div></div><div class="event-new-badge">NEW</div></div>
+                </div>
+              </div>
+              <div class="input-bar">
+                <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+                <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
               </div>
             </div>
-            <div class="bp-divider"><div class="bp-circle" style="margin-left:-6px"></div><div class="bp-divider-line"></div><div class="bp-circle" style="margin-right:-6px"></div></div>
-            <div class="bp-body">
-              <div class="bp-row"><div class="bp-field"><div class="bp-field-label">Date</div><div class="bp-field-value">Fri, May 9</div></div><div class="bp-field"><div class="bp-field-label">Departs</div><div class="bp-field-value">09:15 AM</div></div></div>
-              <div class="bp-row"><div class="bp-field"><div class="bp-field-label">Arrives</div><div class="bp-field-value">09:40 PM</div></div><div class="bp-field"><div class="bp-field-label">Duration</div><div class="bp-field-value">7h 25m</div></div></div>
-              <div class="bp-barcode" id="barcode"></div>
+          </div>
+        </div>
+        <p class="oc-tile-label">Managing Calendar</p>
+      </div>
+
+      <div class="oc-tile">
+        <div class="oc-tile-img">
+          <div style="transform:scale(0.56);transform-origin:top center;">
+            <div class="shell" id="p2">
+              <div class="phone-bar">
+                <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+                <div><div class="bar-name">OpenClaw</div><div class="bar-sub">Vama Agent</div></div>
+              </div>
+              <div class="chat-bg">
+                <div class="boarding-pass" id="bp">
+                  <div class="bp-header">
+                    <div class="bp-airline">British Airways &middot; BA 178</div>
+                    <div class="bp-flight">Economy &middot; Non-stop</div>
+                    <div class="bp-route">
+                      <div><div class="bp-city">JFK</div><div class="bp-city-name">New York</div></div>
+                      <div class="bp-arrow">&#x2708;</div>
+                      <div style="text-align:right"><div class="bp-city">LHR</div><div class="bp-city-name">London</div></div>
+                    </div>
+                  </div>
+                  <div class="bp-divider"><div class="bp-circle" style="margin-left:-6px"></div><div class="bp-divider-line"></div><div class="bp-circle" style="margin-right:-6px"></div></div>
+                  <div class="bp-body">
+                    <div class="bp-row"><div class="bp-field"><div class="bp-field-label">Date</div><div class="bp-field-value">Fri, May 9</div></div><div class="bp-field"><div class="bp-field-label">Departs</div><div class="bp-field-value">09:15 AM</div></div></div>
+                    <div class="bp-row"><div class="bp-field"><div class="bp-field-label">Arrives</div><div class="bp-field-value">09:40 PM</div></div><div class="bp-field"><div class="bp-field-label">Duration</div><div class="bp-field-value">7h 25m</div></div></div>
+                    <div class="bp-barcode" id="barcode"></div>
+                  </div>
+                </div>
+                <div class="bp-price-badge" id="bpprice" style="position:absolute;top:12px;right:12px;">$649 &#x2713;</div>
+              </div>
+              <div class="input-bar">
+                <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+                <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+              </div>
             </div>
           </div>
-          <div class="bp-price-badge" id="bpprice" style="position:absolute;top:12px;right:12px;">$649 ✓</div>
         </div>
-        <div class="input-bar">
-          <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
-          <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
-        </div>
+        <p class="oc-tile-label">Booking Flights</p>
       </div>
-      <p class="screenshot-label">Booking Flights</p>
-    </div>
-    <div class="screenshot-item">
-      <div class="shell" id="p3">
-        <div class="phone-bar">
-          <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
-          <div><div class="bar-name">OpenClaw</div><div class="bar-sub">Vama Agent</div></div>
-        </div>
-        <div class="chat-bg">
-          <div class="email-compose">
-            <div class="email-compose-header">✉️ Drafting email...</div>
-            <div class="ec-field"><div class="ec-label">To</div><div class="ec-value">sarah@acme.com</div></div>
-            <div class="ec-field"><div class="ec-label">Sub</div><div class="ec-value">Re: Q2 Proposal</div></div>
-            <div class="ec-body"><div class="ec-text" id="email-text"></div><span class="cursor" id="email-cursor"></span></div>
-          </div>
-          <div class="send-btn" id="send-btn">Send Email →</div>
-        </div>
-        <div class="input-bar">
-          <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
-          <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
-        </div>
-      </div>
-      <p class="screenshot-label">Drafting Emails</p>
-    </div>
-    <div class="screenshot-item">
-      <div class="shell" id="p4">
-        <div class="phone-bar">
-          <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
-          <div><div class="bar-name">OpenClaw</div><div class="bar-sub">Vama Agent</div></div>
-        </div>
-        <div class="chat-bg">
-          <div class="auto-title">Your automations</div>
-          <div class="auto-subtitle">Running in the background</div>
-          <div class="auto-card">
-            <div class="auto-row"><div class="auto-icon-wrap" style="background:#e8f5e9">📊</div><div class="auto-info"><div class="auto-name">Weekly report</div><div class="auto-desc">Every Mon, 8 AM</div></div><div class="toggle" id="t1"></div></div>
-            <div class="auto-row"><div class="auto-icon-wrap" style="background:#fff3e0">📰</div><div class="auto-info"><div class="auto-name">Morning briefing</div><div class="auto-desc">Daily, 7 AM</div></div><div class="toggle" id="t2"></div></div>
-            <div class="auto-row"><div class="auto-icon-wrap" style="background:#e8f0fe">📋</div><div class="auto-info"><div class="auto-name">Invoice reminder</div><div class="auto-desc">Every Fri, 5 PM</div></div><div class="toggle" id="t3"></div></div>
-            <div class="auto-row"><div class="auto-icon-wrap" style="background:#fce7f3">📧</div><div class="auto-info"><div class="auto-name">Email digest</div><div class="auto-desc">Weekdays, 9 AM</div></div><div class="toggle" id="t4"></div></div>
-          </div>
-          <div class="auto-summary" id="auto-summary"><div>⚡</div><div class="auto-summary-text">4 automations active — running on autopilot</div></div>
-        </div>
-        <div class="input-bar">
-          <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
-          <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
-        </div>
-      </div>
-      <p class="screenshot-label">Automating Tasks</p>
-    </div>
-  </div>
-  <a href="ai.html" class="btn-secondary">See everything OpenClaw can do →</a>
-</section>
 
-<!-- Skills Teaser -->
-<section class="section" style="background:#F5F5F5;display:flex;flex-direction:column;align-items:center;gap:40px;">
-  <div class="section-header" style="align-items:center;">
-    <span class="pill">ClawHub Skills Marketplace</span>
-    <h2 class="section-title" style="text-align:center;">40,000+ skills. Just ask.</h2>
-    <p class="section-sub" style="text-align:center;max-width:600px;">From booking flights to writing code to tracking your finances — OpenClaw taps into ClawHub's massive skill library. New skills added every day. No plugins, no configuration. Just describe what you need.</p>
+      <div class="oc-tile">
+        <div class="oc-tile-img">
+          <div style="transform:scale(0.56);transform-origin:top center;">
+            <div class="shell" id="p3">
+              <div class="phone-bar">
+                <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+                <div><div class="bar-name">OpenClaw</div><div class="bar-sub">Vama Agent</div></div>
+              </div>
+              <div class="chat-bg">
+                <div class="email-compose">
+                  <div class="email-compose-header">&#x2709;&#xFE0F; Drafting email...</div>
+                  <div class="ec-field"><div class="ec-label">To</div><div class="ec-value">sarah@acme.com</div></div>
+                  <div class="ec-field"><div class="ec-label">Sub</div><div class="ec-value">Re: Q2 Proposal</div></div>
+                  <div class="ec-body"><div class="ec-text" id="email-text"></div><span class="cursor" id="email-cursor"></span></div>
+                </div>
+                <div class="send-btn" id="send-btn">Send Email &#x2192;</div>
+              </div>
+              <div class="input-bar">
+                <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+                <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="oc-tile-label">Drafting Emails</p>
+      </div>
+
+      <div class="oc-tile">
+        <div class="oc-tile-img">
+          <div style="transform:scale(0.56);transform-origin:top center;">
+            <div class="shell" id="p4">
+              <div class="phone-bar">
+                <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+                <div><div class="bar-name">OpenClaw</div><div class="bar-sub">Vama Agent</div></div>
+              </div>
+              <div class="chat-bg">
+                <div class="auto-title">Your automations</div>
+                <div class="auto-subtitle">Running in the background</div>
+                <div class="auto-card">
+                  <div class="auto-row"><div class="auto-icon-wrap" style="background:#e8f5e9">&#x1F4CA;</div><div class="auto-info"><div class="auto-name">Weekly report</div><div class="auto-desc">Every Mon, 8 AM</div></div><div class="toggle" id="t1"></div></div>
+                  <div class="auto-row"><div class="auto-icon-wrap" style="background:#fff3e0">&#x1F4F0;</div><div class="auto-info"><div class="auto-name">Morning briefing</div><div class="auto-desc">Daily, 7 AM</div></div><div class="toggle" id="t2"></div></div>
+                  <div class="auto-row"><div class="auto-icon-wrap" style="background:#e8f0fe">&#x1F4CB;</div><div class="auto-info"><div class="auto-name">Invoice reminder</div><div class="auto-desc">Every Fri, 5 PM</div></div><div class="toggle" id="t3"></div></div>
+                  <div class="auto-row"><div class="auto-icon-wrap" style="background:#fce7f3">&#x1F4E7;</div><div class="auto-info"><div class="auto-name">Email digest</div><div class="auto-desc">Weekdays, 9 AM</div></div><div class="toggle" id="t4"></div></div>
+                </div>
+                <div class="auto-summary" id="auto-summary"><div>&#x26A1;</div><div class="auto-summary-text">4 automations active &mdash; running on autopilot</div></div>
+              </div>
+              <div class="input-bar">
+                <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+                <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="oc-tile-label">Automating Tasks</p>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:20px;">
+      <a href="ai.html" class="oc-tiles-cta">See everything OpenClaw can do &#x2192;</a>
+    </div>
+
+    <hr class="oc-divider">
+
+    <div class="oc-cred-row">
+      <div class="oc-cred-left">
+        <p class="oc-cred-body">OpenClaw is the <strong>world&#x2019;s fastest-growing open-source AI agent</strong> &#x2014; now built directly into Vama. No setup, no servers. Just open the app and your agent is ready.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="integrations.html" class="oc-ghost-btn">Browse integrations &#x2192;</a>
+          <a href="ai-skills.html" class="oc-ghost-btn">Browse skills &#x2192;</a>
+        </div>
+      </div>
+      <div class="oc-cred-right">
+        <div class="oc-stat-card">
+          <span class="oc-stat-num">40,000+</span>
+          <span class="oc-stat-label">Skills available</span>
+        </div>
+        <div class="oc-stat-card">
+          <span class="oc-stat-num">150+</span>
+          <span class="oc-stat-label">App integrations</span>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap;justify-content:center;">
-    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 40px;">
-      <p style="font-size:28px;font-weight:700;color:#0071EE;margin:0;">40,000+</p>
-      <p style="font-size:13px;color:#737373;margin:0;">skills available</p>
-    </div>
-    <div style="width:1px;height:40px;background:#E5E5E5;flex-shrink:0;"></div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 40px;">
-      <p style="font-size:28px;font-weight:700;color:#0071EE;margin:0;">200+</p>
-      <p style="font-size:13px;color:#737373;margin:0;">categories</p>
-    </div>
-    <div style="width:1px;height:40px;background:#E5E5E5;flex-shrink:0;"></div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 40px;">
-      <p style="font-size:28px;font-weight:700;color:#0071EE;margin:0;">daily</p>
-      <p style="font-size:13px;color:#737373;margin:0;">new skills added</p>
-    </div>
-  </div>
-  <a href="ai-skills.html" style="color:#0071EE;font-size:15px;font-weight:500;text-decoration:none;">Browse the skills marketplace →</a>
 </section>
 
 <!-- Privacy -->
@@ -763,58 +788,6 @@
         <p style="font-size:12px;color:#737373;margin:0;text-transform:uppercase;letter-spacing:0.08em;">Vama Privacy Promise</p>
         <p style="font-size:20px;color:#fff;line-height:1.6;font-weight:500;margin:0;">"We don't read your messages. We don't sell your data. We don't show you ads. Full stop."</p>
         <span style="background:#0071EE;color:#fff;border-radius:100px;padding:6px 14px;font-size:12px;font-weight:500;align-self:flex-start;">End-to-end encrypted · Always</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Cross-Platform -->
-<section class="section section-light" style="display:flex;flex-direction:column;align-items:center;gap:40px;">
-  <div class="section-header" style="align-items:center;">
-    <span class="pill">Platforms</span>
-    <h2 class="section-title" style="text-align:center;">One app. Every device you own.</h2>
-    <p class="section-sub" style="text-align:center;">Download once. Sign in with your phone number — no email required. Your messages, calls, and OpenClaw agent are instantly available everywhere.</p>
-  </div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
-    <span style="border:1px solid #E5E5E5;border-radius:100px;padding:8px 18px;font-size:14px;color:#1C1C1C;background:#fff;">iOS</span>
-    <span style="border:1px solid #E5E5E5;border-radius:100px;padding:8px 18px;font-size:14px;color:#1C1C1C;background:#fff;">Android</span>
-    <span style="border:1px solid #E5E5E5;border-radius:100px;padding:8px 18px;font-size:14px;color:#1C1C1C;background:#fff;">macOS</span>
-    <span style="border:1px solid #E5E5E5;border-radius:100px;padding:8px 18px;font-size:14px;color:#1C1C1C;background:#fff;">Windows</span>
-    <span style="border:1px solid #E5E5E5;border-radius:100px;padding:8px 18px;font-size:14px;color:#1C1C1C;background:#fff;">Web</span>
-  </div>
-  <p style="font-size:14px;color:#737373;margin:0;text-align:center;">Switch between devices mid-conversation. Everything syncs instantly.</p>
-</section>
-
-<!-- Testimonials -->
-<section class="section section-white" style="display:flex;flex-direction:column;align-items:center;gap:48px;">
-  <div class="section-header" style="align-items:center;">
-    <span class="pill">What people are saying</span>
-    <h2 class="section-title" style="text-align:center;">People love using Vama.</h2>
-    <p class="section-sub" style="text-align:center;">From staying connected with friends to getting real work done — here's what our users are saying.</p>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;width:100%;max-width:1280px;">
-    <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
-      <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
-      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"I use Vama to chat with my friends and family, and my OpenClaw agent handles my emails while I do it. I haven't opened Gmail in two weeks."</p>
-      <div>
-        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">Sarah M.</p>
-        <p style="font-size:12px;color:#737373;margin:0;">Vama user since 2025</p>
-      </div>
-    </div>
-    <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
-      <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
-      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"The group calls are crystal clear and the AI agent is genuinely useful. It's the only app I need on my phone now. Messaging and AI in one place just makes sense."</p>
-      <div>
-        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">James T.</p>
-        <p style="font-size:12px;color:#737373;margin:0;">Product designer</p>
-      </div>
-    </div>
-    <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
-      <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
-      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"I was skeptical but OpenClaw inside a messenger is a completely different experience. I message my agent the same way I message my friends. It just works."</p>
-      <div>
-        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">Priya K.</p>
-        <p style="font-size:12px;color:#737373;margin:0;">Freelance consultant</p>
       </div>
     </div>
   </div>
@@ -871,6 +844,41 @@
       <p class="price-feature-dark">Extended context</p>
       <p class="price-feature-dark">Early access to new skills</p>
       <a href="#" class="btn-sm-white" style="margin-top:8px;">Upgrade</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section section-white" style="display:flex;flex-direction:column;align-items:center;gap:48px;">
+  <div class="section-header" style="align-items:center;">
+    <span class="pill">What people are saying</span>
+    <h2 class="section-title" style="text-align:center;">People love using Vama.</h2>
+    <p class="section-sub" style="text-align:center;">From staying connected with friends to getting real work done — here's what our users are saying.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;width:100%;max-width:1280px;">
+    <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
+      <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
+      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"I use Vama to chat with my friends and family, and my OpenClaw agent handles my emails while I do it. I haven't opened Gmail in two weeks."</p>
+      <div>
+        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">Sarah M.</p>
+        <p style="font-size:12px;color:#737373;margin:0;">Vama user since 2025</p>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
+      <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
+      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"The group calls are crystal clear and the AI agent is genuinely useful. It's the only app I need on my phone now. Messaging and AI in one place just makes sense."</p>
+      <div>
+        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">James T.</p>
+        <p style="font-size:12px;color:#737373;margin:0;">Product designer</p>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
+      <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
+      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"I was skeptical but OpenClaw inside a messenger is a completely different experience. I message my agent the same way I message my friends. It just works."</p>
+      <div>
+        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">Priya K.</p>
+        <p style="font-size:12px;color:#737373;margin:0;">Freelance consultant</p>
+      </div>
     </div>
   </div>
 </section>
