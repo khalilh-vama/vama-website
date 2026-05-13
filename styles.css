@@ -768,7 +768,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   height: 2px;
   background: #F0F0F0;
   border-radius: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   overflow: hidden;
   display: none;
 }
@@ -781,6 +781,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .mf-item.active .mf-item-title { color: #1C1C1C; }
 .mf-item.active .mf-item-chevron { color: #0071EE; transform: rotate(90deg); }
 .mf-item.active .mf-item-body { max-height: 120px; opacity: 1; padding-bottom: 12px; }
+.mf-item.active { border-bottom: none; }
 .mf-item.active .mf-item-progress { display: block; }
 .mf-item.active .mf-item-progress-bar.animating { transition: width 4s linear; width: 100%; }
 .mf-right {
