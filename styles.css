@@ -856,20 +856,21 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   gap: 12px;
 }
 .oc-tile {
-  background: #fff;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
   overflow: hidden;
 }
 .oc-tile-img {
   height: 270px;
-  background: #F5F5F5;
+  background: transparent;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 .oc-tile-label {
   font-size: 13px;
-  color: #737373;
+  color: rgba(255,255,255,0.55);
   font-weight: 500;
   padding: 12px;
   text-align: center;
