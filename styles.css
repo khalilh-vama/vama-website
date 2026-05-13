@@ -734,7 +734,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .mf-item {
   border-bottom: 1px solid #E5E5E5;
   cursor: pointer;
-  overflow: hidden;
 }
 .mf-item-header {
   display: flex;
@@ -769,7 +768,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   height: 2px;
   background: #F0F0F0;
   border-radius: 2px;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   overflow: hidden;
   display: none;
 }
