@@ -853,33 +853,22 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin: 0 auto;
 }
 .oc-tiles {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 .oc-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-}
-.oc-tile-slot {
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  overflow: hidden;
-  position: relative;
-}
-.oc-tile-slot > * {
-  width: 270px;
-  height: 480px;
-  transform-origin: top left;
-  transform: scale(var(--tile-scale, 1));
+  gap: 24px;
 }
 .oc-tile-label {
-  font-size: 14px; font-weight: 500;
-  color: rgba(255,255,255,0.55);
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
   text-align: center;
+  width: 270px;
 }
 .oc-tiles-cta {
   display: flex;
@@ -971,7 +960,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .oc-section { padding: 60px 24px; }
   .oc-headline { font-size: 34px; }
   .oc-subhead { font-size: 16px; }
-  .oc-tiles { grid-template-columns: repeat(2, 1fr); }
+  .oc-tiles { flex-wrap: wrap; gap: 32px; justify-content: center; }
   .oc-bottom { grid-template-columns: 1fr; }
   .oc-vline { display: none; }
 }
