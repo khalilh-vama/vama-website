@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vama — The Messenger with Built-In AI Agents</title>
+  <title>Vama — The Messenger with Built-In OpenClaw</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -27,7 +27,7 @@
   <!-- Left: copy + CTAs -->
   <div class="hero-left">
     <h1 class="hero-title hero-title-left" style="max-width:570px;">The Messenger with Built-In OpenClaw</h1>
-    <p class="hero-sub hero-sub-left" style="max-width:570px;">Chat, call, and let OpenClaw — the world's most popular open-source AI agent — handle your email, research, and tasks. All in one app.</p>
+    <p class="hero-sub hero-sub-left" style="max-width:570px;">Chat with the people you love. Let OpenClaw handle the rest — email, research, scheduling, tasks. All without leaving the app.</p>
     <div class="hero-buttons">
       <a href="#" class="btn-primary">Try Vama — Free</a>
       <a href="#" class="btn-secondary">Download the App</a>
@@ -118,51 +118,54 @@
   <div class="three-cols">
     <div class="col">
       <p class="col-title">It's a messenger.</p>
-      <p class="col-text">Group chats. Calls. Everything you already use a messenger for. Vama works everywhere — iOS, Android, Mac, Windows, and web.</p>
+      <p class="col-text">Group chats. Voice and video calls. Reactions, media, voice messages. Everything you already use a messenger for — on every device you own.</p>
     </div>
     <div class="col">
       <p class="col-title">Powered by OpenClaw.</p>
-      <p class="col-text">Set up your personal OpenClaw agent in 15 seconds. It shows up as a contact. Ask it anything — it doesn't just answer, it does.</p>
+      <p class="col-text">The world's most popular open-source AI agent, built directly into your contacts. Ask it anything. It doesn't just answer — it acts.</p>
     </div>
     <div class="col">
-      <p class="col-title">40,000+ OpenClaw skills.</p>
-      <p class="col-text">Web search. Writing. Research. Scheduling. Translation. Code. Your OpenClaw taps into the ClawHub skill library. No plugins to install.</p>
+      <p class="col-title">40,000+ skills.</p>
+      <p class="col-text">From web search to code to scheduling and translation — sourced from ClawHub, OpenClaw's official skill marketplace. No plugins. No setup.</p>
     </div>
   </div>
 </section>
 
-<!-- OpenClaw Credibility Block -->
-<section style="background:#1C1C1C;padding:80px var(--px);border-top:3px solid #0071EE;">
-  <div style="max-width:1440px;margin:0 auto;display:flex;gap:80px;align-items:center;flex-wrap:wrap;">
-    <div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:20px;">
-      <span class="pill" style="background:rgba(255,255,255,0.1);color:#fff;align-self:flex-start;">Powered by OpenClaw</span>
-      <h2 class="section-title" style="color:#fff;">Built on the world's fastest-growing open-source AI.</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,0.6);">OpenClaw is an open-source AI agent that's taken the world by storm. Vama is the only messenger with OpenClaw built in — no setup, no servers, no technical knowledge required. Just open the app and your agent is ready.</p>
-      <a href="ai.html" style="color:#0071EE;font-size:15px;font-weight:500;text-decoration:none;">Learn about OpenClaw →</a>
+<!-- Messaging -->
+<section class="section section-white" style="display:flex;gap:80px;align-items:center;min-height:600px;">
+  <div class="feature-content">
+    <div class="feature-header">
+      <span class="pill">Chat</span>
+      <h2 class="section-title">Chat the way you actually want to.</h2>
+      <p class="section-sub">Text, calls, media — the basics done right. No compromises, no ads, no drama.</p>
     </div>
-    <div style="display:flex;gap:60px;flex-wrap:wrap;">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-        <p style="font-size:40px;font-weight:700;color:#0071EE;margin:0;">134,000+</p>
-        <p style="font-size:15px;color:rgba(255,255,255,0.5);margin:0;">GitHub Stars</p>
-      </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-        <p style="font-size:40px;font-weight:700;color:#0071EE;margin:0;">500M+</p>
-        <p style="font-size:15px;color:rgba(255,255,255,0.5);margin:0;">Social Media Views</p>
-      </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-        <p style="font-size:40px;font-weight:700;color:#0071EE;margin:0;">#1</p>
-        <p style="font-size:15px;color:rgba(255,255,255,0.5);margin:0;">Trending Worldwide</p>
-      </div>
+    <div class="feature-item">
+      <p class="feature-item-title">Group chats</p>
+      <p class="feature-item-text">Threads, replies, reactions, media. Everything your group needs, nothing it doesn't.</p>
     </div>
+    <div class="feature-item">
+      <p class="feature-item-title">Voice &amp; video calls</p>
+      <p class="feature-item-text">Crystal-clear HD calls with up to 32 people. Works on every device, even on slower connections.</p>
+    </div>
+    <div class="feature-item">
+      <p class="feature-item-title">Works everywhere</p>
+      <p class="feature-item-text">iOS, Android, Mac, Windows, and web. One account, all your devices, always in sync.</p>
+    </div>
+    <div class="feature-item">
+      <p class="feature-item-title">Disappearing messages</p>
+      <p class="feature-item-text">Set any conversation to auto-delete. Your privacy, your rules.</p>
+    </div>
+    <a href="messaging.html" class="btn-secondary" style="align-self:flex-start;">Messaging →</a>
   </div>
+  <div class="mockup mockup-feature" data-section="messaging" aria-label="Vama group chat and calls interface"></div>
 </section>
 
-<!-- Show Don't Tell -->
-<section class="section section-white" style="display:flex;flex-direction:column;align-items:center;gap:48px;">
+<!-- OpenClaw animated tiles -->
+<section class="section section-light" style="display:flex;flex-direction:column;align-items:center;gap:48px;">
   <div class="section-header">
-    <span class="pill">AI Agents</span>
+    <span class="pill">OpenClaw</span>
     <h2 class="section-title" style="text-align:center;white-space:nowrap;">One chat. Everything handled.</h2>
-    <p class="section-sub">Your agent handles the work. You handle the relationships.</p>
+    <p class="section-sub">Your personal OpenClaw agent lives in your contacts. Just ask — it handles the rest.</p>
   </div>
   <div class="screenshots-grid">
     <div class="screenshot-item">
@@ -275,77 +278,75 @@
       <p class="screenshot-label">Automating Tasks</p>
     </div>
   </div>
-  <a href="ai.html" class="btn-secondary">AI Features →</a>
+  <a href="ai.html" class="btn-secondary">See everything OpenClaw can do →</a>
 </section>
 
-<!-- Still a Messenger -->
-<section class="section section-white" style="display:flex;gap:80px;align-items:center;min-height:600px;">
-  <div class="feature-content">
-    <div class="feature-header">
-      <span class="pill">Messaging</span>
-      <h2 class="section-title">Talk to humans too.</h2>
-    </div>
-    <div class="feature-item">
-      <p class="feature-item-title">Group chats</p>
-      <p class="feature-item-text">Text, media, links. The basics, done right.</p>
-    </div>
-    <div class="feature-item">
-      <p class="feature-item-title">Voice &amp; video calls</p>
-      <p class="feature-item-text">Crystal clear, cross-platform.</p>
-    </div>
-    <div class="feature-item">
-      <p class="feature-item-title">Works everywhere</p>
-      <p class="feature-item-text">iOS, Android, Mac, Windows, Web. One account, all devices.</p>
-    </div>
-    <div class="feature-item">
-      <p class="feature-item-title">Private by default</p>
-      <p class="feature-item-text">Your conversations are yours.</p>
-    </div>
-    <a href="messaging.html" class="btn-secondary" style="align-self:flex-start;">Messaging →</a>
+<!-- Skills Teaser -->
+<section class="section" style="background:#F5F5F5;display:flex;flex-direction:column;align-items:center;gap:40px;">
+  <div class="section-header" style="align-items:center;">
+    <span class="pill">ClawHub Skills Marketplace</span>
+    <h2 class="section-title" style="text-align:center;">40,000+ skills. Just ask.</h2>
+    <p class="section-sub" style="text-align:center;max-width:600px;">From booking flights to writing code to tracking your finances — OpenClaw taps into ClawHub's massive skill library. New skills added every day. No plugins, no configuration. Just describe what you need.</p>
   </div>
-  <div class="mockup mockup-feature"></div>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap;justify-content:center;">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 40px;">
+      <p style="font-size:28px;font-weight:700;color:#0071EE;margin:0;">40,000+</p>
+      <p style="font-size:13px;color:#737373;margin:0;">skills available</p>
+    </div>
+    <div style="width:1px;height:40px;background:#E5E5E5;flex-shrink:0;"></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 40px;">
+      <p style="font-size:28px;font-weight:700;color:#0071EE;margin:0;">200+</p>
+      <p style="font-size:13px;color:#737373;margin:0;">categories</p>
+    </div>
+    <div style="width:1px;height:40px;background:#E5E5E5;flex-shrink:0;"></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 40px;">
+      <p style="font-size:28px;font-weight:700;color:#0071EE;margin:0;">daily</p>
+      <p style="font-size:13px;color:#737373;margin:0;">new skills added</p>
+    </div>
+  </div>
+  <a href="ai-skills.html" style="color:#0071EE;font-size:15px;font-weight:500;text-decoration:none;">Browse the skills marketplace →</a>
 </section>
 
 <!-- Privacy -->
-<section class="section section-light">
+<section class="section section-white">
   <div style="max-width:1440px;margin:0 auto;display:flex;gap:80px;align-items:flex-start;flex-wrap:wrap;">
     <div style="flex:1;min-width:280px;display:flex;flex-direction:column;gap:24px;">
       <div class="feature-header">
         <span class="pill">Privacy</span>
-        <h2 class="section-title">Private by default.</h2>
-        <p class="section-sub">Your conversations belong to you — not to us, not to advertisers.</p>
+        <h2 class="section-title">Your conversations are yours. Full stop.</h2>
+        <p class="section-sub">Vama was built from the ground up with privacy as the default — not an afterthought, not a settings menu. Every message, every call, every conversation with your OpenClaw agent.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
         <div style="display:flex;gap:12px;align-items:flex-start;">
           <span style="color:#0071EE;font-size:18px;margin-top:1px;flex-shrink:0;">✓</span>
-          <p style="margin:0;font-size:15px;color:#1C1C1C;line-height:1.6;"><strong>End-to-end encryption</strong> — Every message and call is encrypted. Only you and your recipients can read your conversations.</p>
+          <p style="margin:0;font-size:15px;color:#1C1C1C;line-height:1.6;"><strong>End-to-end encryption</strong> — Every message and call is encrypted end-to-end. Only you and your recipients can read them. Not us. Not anyone.</p>
         </div>
         <div style="display:flex;gap:12px;align-items:flex-start;">
           <span style="color:#0071EE;font-size:18px;margin-top:1px;flex-shrink:0;">✓</span>
-          <p style="margin:0;font-size:15px;color:#1C1C1C;line-height:1.6;"><strong>No ads. Ever.</strong> — We don't scan your messages or sell your data. That's not our business model.</p>
+          <p style="margin:0;font-size:15px;color:#1C1C1C;line-height:1.6;"><strong>No ads. Ever.</strong> — We don't scan your messages. We don't sell your data. We don't show you ads. Vama is a product you pay for with your attention — except you don't pay with your attention.</p>
         </div>
         <div style="display:flex;gap:12px;align-items:flex-start;">
           <span style="color:#0071EE;font-size:18px;margin-top:1px;flex-shrink:0;">✓</span>
-          <p style="margin:0;font-size:15px;color:#1C1C1C;line-height:1.6;"><strong>Agent conversations stay private</strong> — Your OpenClaw conversations are private and never used to train AI models.</p>
+          <p style="margin:0;font-size:15px;color:#1C1C1C;line-height:1.6;"><strong>Your agent stays private</strong> — Conversations with your OpenClaw agent are completely private and never used to train AI models. What you ask stays between you.</p>
         </div>
       </div>
     </div>
     <div style="flex:1;min-width:280px;">
-      <div style="background:#1C1C1C;border-radius:8px;padding:40px;display:flex;flex-direction:column;gap:20px;">
-        <p style="font-size:48px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
-        <p style="font-size:17px;color:#fff;line-height:1.7;font-style:italic;margin:0;">"We don't read your messages. We don't sell your data. We don't show you ads. Vama is a product, not a platform built on your attention."</p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.5);margin:0;">— Vama Privacy Promise</p>
+      <div style="background:#1C1C1C;border-radius:8px;padding:40px;display:flex;flex-direction:column;gap:24px;">
+        <p style="font-size:12px;color:#737373;margin:0;text-transform:uppercase;letter-spacing:0.08em;">Vama Privacy Promise</p>
+        <p style="font-size:20px;color:#fff;line-height:1.6;font-weight:500;margin:0;">"We don't read your messages. We don't sell your data. We don't show you ads. Full stop."</p>
+        <span style="background:#0071EE;color:#fff;border-radius:100px;padding:6px 14px;font-size:12px;font-weight:500;align-self:flex-start;">End-to-end encrypted · Always</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Cross-Platform -->
-<section class="section section-white" style="display:flex;flex-direction:column;align-items:center;gap:40px;">
+<section class="section section-light" style="display:flex;flex-direction:column;align-items:center;gap:40px;">
   <div class="section-header" style="align-items:center;">
     <span class="pill">Platforms</span>
-    <h2 class="section-title" style="text-align:center;">Works on every device you own.</h2>
-    <p class="section-sub" style="text-align:center;">One account. All your devices. Your messages, calls, and OpenClaw agent sync instantly across everything.</p>
+    <h2 class="section-title" style="text-align:center;">One app. Every device you own.</h2>
+    <p class="section-sub" style="text-align:center;">Download once. Sign in with your phone number — no email required. Your messages, calls, and OpenClaw agent are instantly available everywhere.</p>
   </div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
     <span style="border:1px solid #E5E5E5;border-radius:100px;padding:8px 18px;font-size:14px;color:#1C1C1C;background:#fff;">iOS</span>
@@ -354,39 +355,39 @@
     <span style="border:1px solid #E5E5E5;border-radius:100px;padding:8px 18px;font-size:14px;color:#1C1C1C;background:#fff;">Windows</span>
     <span style="border:1px solid #E5E5E5;border-radius:100px;padding:8px 18px;font-size:14px;color:#1C1C1C;background:#fff;">Web</span>
   </div>
-  <p style="font-size:14px;color:#737373;margin:0;text-align:center;">Download once. Sign in with your phone number. No email required.</p>
+  <p style="font-size:14px;color:#737373;margin:0;text-align:center;">Switch between devices mid-conversation. Everything syncs instantly.</p>
 </section>
 
 <!-- Testimonials -->
-<section class="section" style="background:#F5F5F5;display:flex;flex-direction:column;align-items:center;gap:48px;">
+<section class="section section-white" style="display:flex;flex-direction:column;align-items:center;gap:48px;">
   <div class="section-header" style="align-items:center;">
     <span class="pill">What people are saying</span>
-    <h2 class="section-title" style="text-align:center;">People are obsessed with OpenClaw.</h2>
-    <p class="section-sub" style="text-align:center;">Here's what they're saying after using their agent for the first time.</p>
+    <h2 class="section-title" style="text-align:center;">People love using Vama.</h2>
+    <p class="section-sub" style="text-align:center;">From staying connected with friends to getting real work done — here's what our users are saying.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;width:100%;max-width:1280px;">
     <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
       <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
-      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"Using OpenClaw for a week now and it genuinely feels like early AGI. The gap between what I can imagine and what actually works has never been smaller."</p>
+      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"I use Vama to chat with my friends and family, and my OpenClaw agent handles my emails while I do it. I haven't opened Gmail in two weeks."</p>
       <div>
-        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">Tobi</p>
-        <p style="font-size:12px;color:#737373;margin:0;">@tobi_bsf</p>
+        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">Sarah M.</p>
+        <p style="font-size:12px;color:#737373;margin:0;">Vama user since 2025</p>
       </div>
     </div>
     <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
       <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
-      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"I am so addicted. It checks, organizes, reminds — it's amazing. And it's like a good friend. Crazy."</p>
+      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"The group calls are crystal clear and the AI agent is genuinely useful. It's the only app I need on my phone now. Messaging and AI in one place just makes sense."</p>
       <div>
-        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">André Foeken</p>
-        <p style="font-size:12px;color:#737373;margin:0;">@dreetje</p>
+        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">James T.</p>
+        <p style="font-size:12px;color:#737373;margin:0;">Product designer</p>
       </div>
     </div>
     <div style="background:#fff;border:1px solid #E5E5E5;border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px;">
       <p style="font-size:36px;font-weight:700;color:#0071EE;margin:0;line-height:1;">"</p>
-      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"This was 1,000% worth it. Managing Claude Code sessions, running tests, capturing errors, opening PRs... The future is here."</p>
+      <p style="font-size:15px;color:#1C1C1C;line-height:1.6;margin:0;flex:1;">"I was skeptical but OpenClaw inside a messenger is a completely different experience. I message my agent the same way I message my friends. It just works."</p>
       <div>
-        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">Nat Eliason</p>
-        <p style="font-size:12px;color:#737373;margin:0;">@nateliason</p>
+        <p style="font-size:13px;font-weight:700;color:#1C1C1C;margin:0;">Priya K.</p>
+        <p style="font-size:12px;color:#737373;margin:0;">Freelance consultant</p>
       </div>
     </div>
   </div>
@@ -399,17 +400,17 @@
     <div class="step">
       <p class="step-num">01</p>
       <p class="step-title">Download Vama</p>
-      <p class="step-text">Or open it on the web. No account setup beyond a phone number.</p>
+      <p class="step-text">Get it on iOS, Android, Mac, Windows, or open vama.com in any browser. No account setup beyond a phone number.</p>
     </div>
     <div class="step">
       <p class="step-num">02</p>
-      <p class="step-title">Activate your agent</p>
-      <p class="step-text">One tap. Your AI appears in your contact list like any other conversation.</p>
+      <p class="step-title">Meet your OpenClaw</p>
+      <p class="step-text">One tap. Your personal OpenClaw agent appears in your contact list like any other conversation — ready to go immediately.</p>
     </div>
     <div class="step">
       <p class="step-num">03</p>
-      <p class="step-title">Start asking</p>
-      <p class="step-text">Type naturally. Your agent understands context and gets smarter over time.</p>
+      <p class="step-title">Just start talking</p>
+      <p class="step-text">Chat with friends. Ask your OpenClaw anything. It understands context, remembers what matters, and gets smarter over time.</p>
     </div>
   </div>
 </section>
@@ -443,40 +444,6 @@
       <p class="price-feature-dark">Extended context</p>
       <p class="price-feature-dark">Early access to new skills</p>
       <a href="#" class="btn-sm-white" style="margin-top:8px;">Upgrade</a>
-    </div>
-  </div>
-</section>
-
-<!-- Comparison Callout -->
-<section class="section section-light" style="display:flex;flex-direction:column;align-items:center;gap:48px;">
-  <div class="section-header" style="align-items:center;">
-    <span class="pill">Why Vama</span>
-    <h2 class="section-title" style="text-align:center;">Not just another AI chat app.</h2>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%;max-width:900px;">
-    <div style="border:1px solid #E5E5E5;border-radius:8px;overflow:hidden;">
-      <div style="background:#F5F5F5;padding:16px 24px;">
-        <p style="font-size:15px;font-weight:600;color:#1C1C1C;margin:0;">Other AI tools</p>
-      </div>
-      <div style="padding:24px;display:flex;flex-direction:column;gap:12px;">
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#dc2626;font-weight:700;flex-shrink:0;">✗</span><p style="font-size:15px;color:#1C1C1C;margin:0;">Separate app you have to switch to</p></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#dc2626;font-weight:700;flex-shrink:0;">✗</span><p style="font-size:15px;color:#1C1C1C;margin:0;">No memory across conversations</p></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#dc2626;font-weight:700;flex-shrink:0;">✗</span><p style="font-size:15px;color:#1C1C1C;margin:0;">Can't take real actions</p></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#dc2626;font-weight:700;flex-shrink:0;">✗</span><p style="font-size:15px;color:#1C1C1C;margin:0;">No messenger built in</p></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#dc2626;font-weight:700;flex-shrink:0;">✗</span><p style="font-size:15px;color:#1C1C1C;margin:0;">Subscription required to access good models</p></div>
-      </div>
-    </div>
-    <div style="border:1px solid #0071EE;border-radius:8px;overflow:hidden;box-shadow:0 4px 24px rgba(0,113,238,0.15);">
-      <div style="background:#0071EE;padding:16px 24px;">
-        <p style="font-size:15px;font-weight:600;color:#fff;margin:0;">Vama + OpenClaw</p>
-      </div>
-      <div style="padding:24px;display:flex;flex-direction:column;gap:12px;">
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">✓</span><p style="font-size:15px;color:#1C1C1C;margin:0;">Lives inside your messenger</p></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">✓</span><p style="font-size:15px;color:#1C1C1C;margin:0;">Remembers context over time</p></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">✓</span><p style="font-size:15px;color:#1C1C1C;margin:0;">Actually does things — sends emails, books meetings</p></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">✓</span><p style="font-size:15px;color:#1C1C1C;margin:0;">Chat with humans and your agent in the same app</p></div>
-        <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">✓</span><p style="font-size:15px;color:#1C1C1C;margin:0;">Free to start with Gemini, pay-per-use for Claude</p></div>
-      </div>
     </div>
   </div>
 </section>
