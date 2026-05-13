@@ -22,7 +22,7 @@
             '<p class="dm-store">App Store</p>' +
             '<p class="dm-desc">Requires iOS 15 or newer.<br>Scan the QR code below with your Apple device to download.</p>' +
           '</div>' +
-          '<img class="dm-qr" src="https://www.figma.com/api/mcp/asset/beb7f926-7da7-42b8-a021-8b7a8a9f0f04" alt="iOS App Store QR code" />' +
+          '<img class="dm-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://vama.com" alt="iOS App Store QR code" />' +
         '</div>' +
         '<div class="dm-card">' +
           '<div class="dm-card-copy">' +
@@ -30,7 +30,7 @@
             '<p class="dm-store">Google Play</p>' +
             '<p class="dm-desc">Requires Android 10 or newer.<br>Scan the QR code below with your Android device to download.</p>' +
           '</div>' +
-          '<img class="dm-qr" src="https://www.figma.com/api/mcp/asset/e3470bcb-36cf-4e59-be71-49801d99d349" alt="Google Play QR code" />' +
+          '<img class="dm-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://vama.com" alt="Google Play QR code" />' +
         '</div>' +
       '</div>' +
     '</div>';
