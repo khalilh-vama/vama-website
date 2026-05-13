@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Skills — Vama</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><svg width="48" height="48" viewBox="0 0 53.5217 53.5217" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.2442 0H5.27747C2.36281 0 0 2.36281 0 5.27747V48.2442C0 51.1589 2.36281 53.5217 5.27747 53.5217H48.2442C51.1589 53.5217 53.5217 51.1589 53.5217 48.2442V5.27747C53.5217 2.36281 51.1589 0 48.2442 0Z" fill="#0071EE"/><path fill-rule="evenodd" clip-rule="evenodd" d="M37.4652 10.704C38.5238 10.704 39.5587 11.0181 40.4387 11.6059C41.3187 12.1937 42.005 13.0299 42.4101 14.0076C42.8151 14.9853 42.9212 16.0615 42.7149 17.0998C42.5086 18.1381 41.9983 19.0914 41.2505 19.84C40.5019 20.5886 39.5486 21.0981 38.5103 21.3044C37.472 21.5108 36.3958 21.4046 35.4181 20.9996C34.4404 20.5945 33.6042 19.9082 33.0164 19.0282C32.4286 18.1482 32.1145 17.1133 32.1145 16.0548C32.1145 14.635 32.6787 13.2741 33.6825 12.2703C34.6863 11.2665 36.0471 10.7023 37.4669 10.7023L37.4652 10.704Z" fill="#FCFCFC"/><path d="M13.6606 11.2692C16.3018 9.94774 19.5197 11.0195 20.8411 13.6606L31.5501 35.0646C32.8715 37.7057 31.8006 40.9233 29.1587 42.2451C26.5175 43.5665 23.2996 42.4948 21.9782 39.8536L11.2688 18.4489C9.94739 15.8078 11.0184 12.5902 13.6602 11.2684L13.6606 11.2692Z" fill="#FCFCFC"/></svg></a>
+  <div class="nav-spacer"></div>
+  <div class="nav-links">
+    <a href="ai.html" class="active">AI Agent</a>
+    <a href="messaging.html">Messaging</a>
+    <a href="wallet.html">Wallet</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="nav-cta">Try Vama</a>
+  </div>
+</nav>
+
+<!-- Hero Search -->
+<div class="skills-hero">
+  <span class="pill-blue" style="font-size:13px;padding:6px 14px;">Skills Marketplace</span>
+  <h1 style="font-size:48px;font-weight:700;line-height:58px;color:var(--black);text-align:center;max-width:700px;">Discover 40,000+ Skills<br>for your AI agent</h1>
+  <p style="font-size:18px;color:var(--gray);text-align:center;max-width:560px;line-height:1.5;">Search, install, and combine skills to make your agent more powerful.</p>
+  <div class="skills-search">
+    <span class="search-icon">&#8981;</span>
+    <input type="text" placeholder="Search skills, apps, or categories&hellip;" />
+  </div>
+  <button class="skills-search-btn">Search</button>
+</div>
+
+<!-- Filter Bar -->
+<div class="filter-bar">
+  <div class="filter-tabs">
+    <div class="filter-tab active">All</div>
+    <div class="filter-tab">Productivity</div>
+    <div class="filter-tab">Communication</div>
+    <div class="filter-tab">Research</div>
+    <div class="filter-tab">Development</div>
+    <div class="filter-tab">Writing</div>
+    <div class="filter-tab">Automation</div>
+    <div class="filter-tab">Entertainment</div>
+    <div class="filter-tab">Finance</div>
+    <div class="filter-tab">Design</div>
+    <div class="filter-tab">Marketing</div>
+    <div class="filter-tab">Sales</div>
+    <div class="filter-tab">Data &amp; Analytics</div>
+    <div class="filter-tab">Education</div>
+    <div class="filter-tab">Health</div>
+    <div class="filter-tab">Travel</div>
+    <div class="filter-tab">Security</div>
+    <div class="filter-tab">DevOps</div>
+    <div class="filter-tab">Legal</div>
+    <div class="filter-tab">HR</div>
+    <div class="filter-tab">Shopping</div>
+    <div class="filter-tab">Social Media</div>
+  </div>
+</div>
+
+<!-- Skills Grid -->
+<div class="skills-body">
+  <div class="results-row">
+    <p class="results-count">Loading skills&hellip;</p>
+    <select id="sort-select" style="appearance:none;-webkit-appearance:none;border:1px solid var(--border);border-radius:8px;padding:8px 32px 8px 12px;font-size:14px;font-family:inherit;color:var(--black);background:var(--white) url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%226%22 viewBox=%220 0 10 6%22><path d=%22M0 0l5 6 5-6z%22 fill=%22%23737373%22/></svg>') no-repeat right 10px center;cursor:pointer;outline:none;">
+      <option value="popular">Sort: Most Popular</option>
+      <option value="newest">Sort: Newest</option>
+      <option value="az">Sort: A&ndash;Z</option>
+    </select>
+  </div>
+
+  <div class="skills-list" id="skills-list">
+    <!-- Populated by JavaScript -->
+  </div>
+</div>
+
+<!-- Load More -->
+<div class="load-more-wrap">
+  <button class="load-more-btn">Load more skills</button>
+</div>
+
+<!-- Footer CTA -->
+<div class="footer-cta">
+  <p class="footer-cta-title">Your next assistant is<br>already in your chat.</p>
+  <a href="#" class="btn-white">Download the App today</a>
+</div>
+
+<!-- Footer -->
+<footer class="footer" style="padding:56px 80px;">
+  <div class="footer-left">
+    <div class="footer-logo">
+      <img src="assets/logo-mark.svg" alt="Vama" />
+    </div>
+    <p class="footer-copy">&copy; 2026 Vama Int Pte. Ltd.</p>
+  </div>
+  <div class="footer-spacer"></div>
+  <nav class="footer-links">
+    <div class="footer-col">
+      <p class="footer-col-title">Product</p>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Download</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Company</p>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Legal</p>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Social</p>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </nav>
+</footer>
+
+<script>
+(function () {
+  var API  = 'https://clawhub.ai/api/v1';
+  var PAGE = 12;
+
+  var query       = '';
+  var category    = '';
+  var searchOffset = 0;
+  var totalShown   = 0;
+  var busy        = false;
+  var currentSort = 'popular';
+
+  // Fallback shown when the API is unreachable
+  var FALLBACK = [
+    { name: 'Gmail Manager',      category: 'Productivity',  description: 'Read, summarize, send, and organize your Gmail inbox hands-free.',       installs: 128400 },
+    { name: 'Slack Messenger',    category: 'Communication', description: 'Post messages, read channels, and manage Slack notifications.',           installs: 94200  },
+    { name: 'Web Researcher',     category: 'Research',      description: 'Search the web and summarize results from any source in seconds.',        installs: 87100  },
+    { name: 'GitHub Assistant',   category: 'Development',   description: 'Create issues, review PRs, and push code updates via GitHub.',            installs: 71800  },
+    { name: 'Calendar Scheduler', category: 'Productivity',  description: 'Check availability, schedule meetings, and send invites automatically.',  installs: 68500  },
+    { name: 'Notion Writer',      category: 'Writing',       description: 'Create pages, update databases, and append notes in Notion.',              installs: 61300  },
+    { name: 'Zapier Automator',   category: 'Automation',    description: 'Trigger any Zapier workflow from a simple chat message.',                  installs: 58900  },
+    { name: 'Flight Tracker',     category: 'Research',      description: 'Search flights, compare prices, and track live flight status.',            installs: 52700  },
+    { name: 'Spotify Controller', category: 'Entertainment', description: 'Play songs, manage playlists, and control Spotify hands-free.',            installs: 49100  },
+    { name: 'PDF Reader',         category: 'Productivity',  description: 'Parse, summarize, and extract data from any PDF document.',                installs: 46800  },
+    { name: 'Twitter/X Poster',   category: 'Communication', description: 'Draft, schedule, and post tweets or threads with your agent.',             installs: 43200  },
+    { name: 'Stock Watcher',      category: 'Finance',       description: 'Track stock prices, get alerts, and summarize market news.',               installs: 39600  },
+  ];
+
+  var PILL = {
+    productivity:  'pill-blue',
+    communication: 'pill-purple',
+    research:      'pill-green',
+    development:   'pill-orange',
+    writing:       'pill-yellow',
+    automation:    'pill-red',
+    entertainment: 'pill-ent',
+    finance:       'pill-teal',
+  };
+
+  function pill(cat) { return PILL[(cat || '').toLowerCase()] || 'pill-blue'; }
+
+  function inferCategory(skill) {
+    var text = ((skill.displayName || '') + ' ' + (skill.summary || '')).toLowerCase();
+    if (/email|gmail|inbox|imap|outlook|mail/.test(text))          return 'Communication';
+    if (/slack|discord|telegram|teams|chat|message/.test(text))    return 'Communication';
+    if (/github|git\b|code|deploy|pull request|ci\/cd/.test(text)) return 'Development';
+    if (/calendar|schedul|meeting|appointment|event/.test(text))   return 'Productivity';
+    if (/notion|docs|document|write|draft|blog/.test(text))        return 'Writing';
+    if (/automat|workflow|zapier|trigger|cron/.test(text))         return 'Automation';
+    if (/search|research|web|browse|news|weather/.test(text))      return 'Research';
+    if (/music|spotify|video|game|entertain|movie/.test(text))     return 'Entertainment';
+    if (/stock|finance|payment|money|crypto|invest/.test(text))    return 'Finance';
+    if (/task|produc|manage|organiz|remind|todo/.test(text))       return 'Productivity';
+    return null;
+  }
+
+  // Detect non-English by checking for CJK, Arabic, Devanagari, Cyrillic, Korean, Japanese
+  function isEnglish(text) {
+    if (!text) return true;
+    return !/[一-鿿぀-ヿ가-힯؀-ۿऀ-ॿЀ-ӿ]/.test(text);
+  }
+
+  function sortSkills(skills) {
+    var arr = skills.slice();
+    if (currentSort === 'newest') {
+      arr.sort(function(a, b) { return (b.updatedAt || 0) - (a.updatedAt || 0); });
+    } else if (currentSort === 'az') {
+      arr.sort(function(a, b) {
+        var an = (a.displayName || a.name || '').toLowerCase();
+        var bn = (b.displayName || b.name || '').toLowerCase();
+        return an < bn ? -1 : an > bn ? 1 : 0;
+      });
+    }
+    return arr;
+  }
+
+  function fmt(n) { return n >= 1000 ? (n / 1000).toFixed(1) + 'k' : String(n); }
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.textContent = s || '';
+    return d.innerHTML;
+  }
+
+  function slugPill(slug) {
+    var vals = Object.values(PILL);
+    var h = 0;
+    var str = slug || '';
+    for (var i = 0; i < str.length; i++) {
+      h = (h * 31 + str.charCodeAt(i)) >>> 0;
+    }
+    return vals[h % vals.length];
+  }
+
+  function cardHTML(s) {
+    var name     = s.displayName || s.name || s.title || 'Untitled';
+    var desc     = s.summary || s.description || '';
+    var cat      = s.category || (Array.isArray(s.tags) ? s.tags[0] : '') || inferCategory(s);
+    var pillCls  = cat ? pill(cat) : slugPill(s.slug || name);
+    var installs = s.installs || s.downloads || s.stars || null;
+    var pillHTML = cat
+      ? '<span class="' + pillCls + '" style="align-self:flex-start;">' + esc(cat) + '</span>'
+      : '<span class="' + pillCls + '" style="align-self:flex-start;opacity:0.7;">Skill</span>';
+    var slug = s.slug || '';
+    var installsHTML = installs
+      ? '<span class="skill-installs" id="inst-' + slug + '">&#8595; ' + fmt(installs) + ' installs</span>'
+      : '<span class="skill-installs" id="inst-' + slug + '"></span>';
+    return '<div class="skill-list-card">' +
+      pillHTML +
+      '<p class="skill-list-card-title">' + esc(name) + '</p>' +
+      '<p class="skill-list-card-desc">' + esc(desc) + '</p>' +
+      '<div class="skill-card-footer">' +
+        installsHTML +
+        '<span class="skill-add-btn">+ Add</span>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderRows(skills, append) {
+    var list = document.getElementById('skills-list');
+    if (!append) list.innerHTML = '';
+    for (var i = 0; i < skills.length; i += 3) {
+      var row = document.createElement('div');
+      row.className = 'skills-list-row';
+      row.innerHTML = skills.slice(i, i + 3).map(cardHTML).join('');
+      list.appendChild(row);
+    }
+  }
+
+  function fetchInstalls(skills) {
+    skills.forEach(function(s) {
+      if (!s.slug) return;
+      fetch(API + '/skills/' + encodeURIComponent(s.slug))
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          var stats = d.skill && d.skill.stats;
+          if (!stats) return;
+          var n = stats.installsAllTime || stats.downloads || 0;
+          var el = document.getElementById('inst-' + s.slug);
+          if (el && n > 0) el.textContent = '↓ ' + fmt(n) + ' installs';
+        })
+        .catch(function() {});
+    });
+  }
+
+  function normalize(data) {
+    if (Array.isArray(data)) return data;
+    var keys = ['skills', 'results', 'data', 'items'];
+    for (var i = 0; i < keys.length; i++) {
+      if (Array.isArray(data[keys[i]])) return data[keys[i]];
+    }
+    return [];
+  }
+
+  function load(append) {
+    if (busy) return;
+    busy = true;
+
+    var list     = document.getElementById('skills-list');
+    var wrap    = document.querySelector('.load-more-wrap');
+    var btn     = document.querySelector('.load-more-btn');
+    var countEl = document.querySelector('.results-count');
+
+    if (!append) {
+      list.innerHTML = '<div style="padding:60px;text-align:center;color:var(--gray);font-size:15px;">Loading skills…</div>';
+      searchOffset = 0;
+      totalShown = 0;
+    } else {
+      btn.textContent = 'Loading…';
+      btn.disabled = true;
+    }
+
+    var q = [query, (category && category !== 'All') ? category : ''].filter(Boolean).join(' ').trim();
+    var searchQ = q || 'email calendar messaging github notion writing automation finance research';
+    var url = API + '/search?q=' + encodeURIComponent(searchQ) + '&limit=' + (PAGE * 2) + '&offset=' + searchOffset;
+    if (currentSort === 'newest') url += '&sort=newest';
+
+    fetch(url, { signal: AbortSignal.timeout(8000) })
+      .then(function(res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function(data) {
+        var raw = normalize(data);
+
+        // Filter English-only
+        var filtered = raw.filter(function(s) {
+          return isEnglish(s.displayName || s.name || '') && isEnglish(s.summary || s.description || '');
+        });
+        var pool = filtered.length > 0 ? filtered : raw;
+
+        if (currentSort === 'popular') {
+          // Fetch install counts for the whole pool in parallel, then sort by installs
+          return Promise.all(pool.map(function(s) {
+            if (!s.slug) return Promise.resolve(s);
+            return fetch(API + '/skills/' + encodeURIComponent(s.slug), { signal: AbortSignal.timeout(6000) })
+              .then(function(r) { return r.json(); })
+              .then(function(d) {
+                var stats = d.skill && d.skill.stats;
+                s.installs = stats ? (stats.installsAllTime || stats.downloads || 0) : 0;
+                return s;
+              })
+              .catch(function() { s.installs = 0; return s; });
+          })).then(function(withInstalls) {
+            withInstalls.sort(function(a, b) { return (b.installs || 0) - (a.installs || 0); });
+            return { skills: withInstalls.slice(0, PAGE), gotCount: raw.length };
+          });
+        } else {
+          var skills = sortSkills(pool).slice(0, PAGE);
+          return Promise.resolve({ skills: skills, gotCount: raw.length });
+        }
+      })
+      .then(function(result) {
+        var skills   = result.skills;
+        var gotCount = result.gotCount;
+
+        if (skills.length === 0 && !append) {
+          throw new Error('Empty — using fallback');
+        }
+
+        renderRows(skills, append);
+
+        // For non-popular sorts, fetch installs in the background
+        if (currentSort !== 'popular') fetchInstalls(skills);
+
+        searchOffset += PAGE * 2;
+        totalShown += skills.length;
+        countEl.textContent = 'Showing ' + totalShown + ' skills';
+
+        // Show load more if the API returned a full batch (likely more pages exist)
+        if (gotCount < PAGE) {
+          wrap.style.display = 'none';
+        } else {
+          wrap.style.display = 'flex';
+          btn.textContent = 'Load more skills';
+          btn.disabled = false;
+        }
+      })
+      .catch(function(err) {
+        console.warn('[ClawHub] using fallback:', err.message);
+        renderRows(FALLBACK, false);
+        totalShown = FALLBACK.length;
+        countEl.textContent = 'Showing 12 skills';
+        wrap.style.display = 'none';
+        var notice = document.createElement('p');
+        notice.style.cssText = 'text-align:center;color:var(--gray);font-size:13px;margin-top:16px;';
+        notice.textContent = 'Live data unavailable — showing sample skills.';
+        list.appendChild(notice);
+      })
+      .finally(function() {
+        busy = false;
+        btn.textContent = 'Load more skills';
+        btn.disabled = false;
+      });
+  }
+
+  // Filter tabs
+  document.querySelectorAll('.filter-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.filter-tab').forEach(function(t) { t.classList.remove('active'); });
+      this.classList.add('active');
+      category = this.textContent.trim();
+      load(false);
+    });
+  });
+
+  // Search
+  var input     = document.querySelector('.skills-search input');
+  var searchBtn = document.querySelector('.skills-search-btn');
+  function doSearch() { query = input.value.trim(); load(false); }
+  searchBtn.addEventListener('click', doSearch);
+  input.addEventListener('keydown', function(e) { if (e.key === 'Enter') doSearch(); });
+
+  // Sort
+  document.getElementById('sort-select').addEventListener('change', function() {
+    currentSort = this.value;
+    load(false);
+  });
+
+  // Load more
+  document.querySelector('.load-more-btn').addEventListener('click', function() { load(true); });
+
+  // Initial load
+  load(false);
+})();
+</script>
+
+<script src="download-modal.js"></script>
+</body>
+</html>

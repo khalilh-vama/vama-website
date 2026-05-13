@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vama — The Messenger with Built-In AI Agents</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><svg width="48" height="48" viewBox="0 0 53.5217 53.5217" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.2442 0H5.27747C2.36281 0 0 2.36281 0 5.27747V48.2442C0 51.1589 2.36281 53.5217 5.27747 53.5217H48.2442C51.1589 53.5217 53.5217 51.1589 53.5217 48.2442V5.27747C53.5217 2.36281 51.1589 0 48.2442 0Z" fill="#0071EE"/><path fill-rule="evenodd" clip-rule="evenodd" d="M37.4652 10.704C38.5238 10.704 39.5587 11.0181 40.4387 11.6059C41.3187 12.1937 42.005 13.0299 42.4101 14.0076C42.8151 14.9853 42.9212 16.0615 42.7149 17.0998C42.5086 18.1381 41.9983 19.0914 41.2505 19.84C40.5019 20.5886 39.5486 21.0981 38.5103 21.3044C37.472 21.5108 36.3958 21.4046 35.4181 20.9996C34.4404 20.5945 33.6042 19.9082 33.0164 19.0282C32.4286 18.1482 32.1145 17.1133 32.1145 16.0548C32.1145 14.635 32.6787 13.2741 33.6825 12.2703C34.6863 11.2665 36.0471 10.7023 37.4669 10.7023L37.4652 10.704Z" fill="#FCFCFC"/><path d="M13.6606 11.2692C16.3018 9.94774 19.5197 11.0195 20.8411 13.6606L31.5501 35.0646C32.8715 37.7057 31.8006 40.9233 29.1587 42.2451C26.5175 43.5665 23.2996 42.4948 21.9782 39.8536L11.2688 18.4489C9.94739 15.8078 11.0184 12.5902 13.6602 11.2684L13.6606 11.2692Z" fill="#FCFCFC"/></svg></a>
+  <div class="nav-spacer"></div>
+  <div class="nav-links">
+    <a href="ai.html">AI Agent</a>
+    <a href="messaging.html">Messaging</a>
+    <a href="wallet.html">Wallet</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="nav-cta">Try Vama</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-two-col">
+  <!-- Left: copy + CTAs -->
+  <div class="hero-left">
+    <h1 class="hero-title hero-title-left" style="max-width:570px;">The Messenger with Built-In AI Agents</h1>
+    <p class="hero-sub hero-sub-left" style="max-width:570px;">Chat with friends, make calls, manage your email, research anything, automate tasks—all without leaving the app.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary">Try Vama — Free</a>
+      <a href="#" class="btn-secondary">Download the App</a>
+    </div>
+  </div>
+  <!-- Right: phone + floating chat bubbles -->
+  <div class="hero-visual">
+    <!-- Phone mockup (bottom layer) -->
+    <img src="https://www.figma.com/api/mcp/asset/28034127-77d8-481a-846b-2269662bc2c9" class="hero-phone" alt="Vama app">
+    <!-- Sent: reply bubble -->
+    <div class="hb-sent">
+      <div class="hb-sent-reply">
+        <div class="hb-sent-reply-line"></div>
+        <div class="hb-sent-reply-text">
+          <p class="hb-sent-reply-from">John</p>
+          <p class="hb-sent-reply-preview">I just got us tickets to that concert...</p>
+        </div>
+      </div>
+      <p class="hb-sent-msg">No way! This is going to be the best night ever! 🎉</p>
+      <div class="hb-sent-footer">
+        <div class="hb-reactions">
+          <span class="hb-reaction">🔥 4</span>
+          <span class="hb-reaction hb-reaction-sel">😊 2</span>
+        </div>
+        <div class="hb-sent-time-wrap">
+          <span>2:55 PM</span>
+          <img src="https://www.figma.com/api/mcp/asset/59fff169-71a2-4615-8f11-cec84a0cd459" width="20" height="20" alt="">
+        </div>
+      </div>
+      <img src="https://www.figma.com/api/mcp/asset/791cd865-862a-487c-b116-bd1d8eef7d65" class="hb-sent-tail" alt="">
+    </div>
+    <!-- Received: incoming video call -->
+    <div class="hb-call">
+      <div class="hb-call-inner">
+        <div>
+          <p class="hb-call-title">Incoming Video Call</p>
+          <p class="hb-call-sub">9:40 AM, 1 Hour 2 Minutes</p>
+        </div>
+        <div class="hb-call-icon-wrap">
+          <div class="hb-call-icon-pos">
+            <img src="https://www.figma.com/api/mcp/asset/f77e4b37-e610-4742-b46d-5eb7fdca2ab8" alt="">
+          </div>
+        </div>
+      </div>
+      <span class="hb-call-time">2:55 PM</span>
+      <img src="https://www.figma.com/api/mcp/asset/14f373a9-9aad-4d5f-b0e6-0d340fd222ef" class="hb-call-tail" alt="">
+    </div>
+    <!-- Deco: lock shield -->
+    <img src="https://www.figma.com/api/mcp/asset/16b2564e-515d-42ff-ab49-e7a4ab60b129" class="hero-deco" alt="">
+    <!-- Voice bubble (topmost layer) -->
+    <div class="hb-voice">
+      <div class="hb-voice-cell">
+        <div class="hb-voice-play">
+          <div class="hb-voice-play-icon"><img src="https://www.figma.com/api/mcp/asset/e208568a-2645-4398-93ed-a1f057694d1e" alt=""></div>
+        </div>
+        <div class="hb-voice-wave">
+          <div class="hb-voice-bar" style="height:5px"></div>
+          <div class="hb-voice-bar" style="height:5px"></div>
+          <div class="hb-voice-bar" style="height:5px"></div>
+          <div class="hb-voice-bar" style="height:19px"></div>
+          <div class="hb-voice-bar" style="height:19px"></div>
+          <div class="hb-voice-bar" style="height:19px"></div>
+          <div class="hb-voice-bar" style="height:10px"></div>
+          <div class="hb-voice-bar" style="height:13px"></div>
+          <div class="hb-voice-bar" style="height:5px"></div>
+          <div class="hb-voice-bar" style="height:5px"></div>
+          <div class="hb-voice-bar" style="height:19px"></div>
+          <div class="hb-voice-bar" style="height:19px"></div>
+          <div class="hb-voice-bar" style="height:8px"></div>
+          <div class="hb-voice-bar" style="height:19px"></div>
+          <div class="hb-voice-bar" style="height:16px"></div>
+          <div class="hb-voice-bar" style="height:19px"></div>
+          <div class="hb-voice-bar" style="height:5px"></div>
+          <div class="hb-voice-bar" style="height:16px"></div>
+          <div class="hb-voice-bar" style="height:19px"></div>
+          <div class="hb-voice-bar" style="height:16px"></div>
+          <div class="hb-voice-bar" style="height:5px"></div>
+        </div>
+      </div>
+      <span class="hb-voice-time">2:55 PM</span>
+      <img src="https://www.figma.com/api/mcp/asset/6e3a2e95-efa5-4c56-aa0a-9d2fb7517939" class="hb-voice-tail" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- Three columns -->
+<section class="section section-light">
+  <div class="three-cols">
+    <div class="col">
+      <p class="col-title">It's a messenger.</p>
+      <p class="col-text">Group chats. Calls. Everything you already use a messenger for. Vama works everywhere — iOS, Android, Mac, Windows, and web.</p>
+    </div>
+    <div class="col">
+      <p class="col-title">With an AI that works.</p>
+      <p class="col-text">Set up your personal AI agent in 15 seconds. It shows up as a contact. Ask it anything — it doesn't just answer, it does.</p>
+    </div>
+    <div class="col">
+      <p class="col-title">40,000+ skills.</p>
+      <p class="col-text">Web search. Writing. Research. Scheduling. Translation. Code. Your agent taps into a massive skill library. No plugins to install.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Show Don't Tell -->
+<section class="section section-white" style="display:flex;flex-direction:column;align-items:center;gap:48px;">
+  <div class="section-header">
+    <span class="pill">AI Agents</span>
+    <h2 class="section-title" style="text-align:center;white-space:nowrap;">One chat. Everything handled.</h2>
+    <p class="section-sub">Your agent handles the work. You handle the relationships.</p>
+  </div>
+  <div class="screenshots-grid">
+    <div class="screenshot-item">
+      <div class="shell" id="p1">
+        <div class="phone-bar">
+          <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+          <div><div class="bar-name">Assistant</div><div class="bar-sub">AI Agent</div></div>
+        </div>
+        <div class="chat-bg">
+          <div class="cal-header"><div class="cal-month">May 2026</div><div class="cal-nav">‹ ›</div></div>
+          <div class="cal-grid">
+            <div class="cal-day-label">M</div><div class="cal-day-label">T</div><div class="cal-day-label">W</div><div class="cal-day-label">T</div><div class="cal-day-label">F</div><div class="cal-day-label">S</div><div class="cal-day-label">S</div>
+            <div class="cal-day"></div><div class="cal-day"></div><div class="cal-day"></div>
+            <div class="cal-day">1</div><div class="cal-day has-event">2</div><div class="cal-day">3</div><div class="cal-day">4</div>
+            <div class="cal-day">5</div><div class="cal-day has-event">6</div><div class="cal-day">7</div>
+            <div class="cal-day today has-event">8</div><div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div>
+            <div class="cal-day has-event">12</div><div class="cal-day">13</div><div class="cal-day">14</div>
+            <div class="cal-day">15</div><div class="cal-day">16</div><div class="cal-day has-event">17</div><div class="cal-day">18</div>
+          </div>
+          <div class="event-list" style="margin-top:8px">
+            <div class="event-item" id="ev1"><div class="event-dot" style="background:#0071EE"></div><div><div class="event-title">Team Sync</div><div class="event-time">Thu · 2:00 PM</div></div><div class="event-new-badge">NEW</div></div>
+            <div class="event-item" id="ev2"><div class="event-dot" style="background:#22c55e"></div><div><div class="event-title">1:1 with Marcus</div><div class="event-time">Fri · 10:00 AM</div></div><div class="event-new-badge">NEW</div></div>
+            <div class="event-item" id="ev3"><div class="event-dot" style="background:#f59e0b"></div><div><div class="event-title">Design Review</div><div class="event-time">Mon · 9:30 AM</div></div><div class="event-new-badge">NEW</div></div>
+          </div>
+        </div>
+        <div class="input-bar">
+          <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+          <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+        </div>
+      </div>
+      <p class="screenshot-label">Managing Calendar</p>
+    </div>
+    <div class="screenshot-item">
+      <div class="shell" id="p2">
+        <div class="phone-bar">
+          <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+          <div><div class="bar-name">Assistant</div><div class="bar-sub">AI Agent</div></div>
+        </div>
+        <div class="chat-bg">
+          <div class="boarding-pass" id="bp">
+            <div class="bp-header">
+              <div class="bp-airline">British Airways · BA 178</div>
+              <div class="bp-flight">Economy · Non-stop</div>
+              <div class="bp-route">
+                <div><div class="bp-city">JFK</div><div class="bp-city-name">New York</div></div>
+                <div class="bp-arrow">✈</div>
+                <div style="text-align:right"><div class="bp-city">LHR</div><div class="bp-city-name">London</div></div>
+              </div>
+            </div>
+            <div class="bp-divider"><div class="bp-circle" style="margin-left:-6px"></div><div class="bp-divider-line"></div><div class="bp-circle" style="margin-right:-6px"></div></div>
+            <div class="bp-body">
+              <div class="bp-row"><div class="bp-field"><div class="bp-field-label">Date</div><div class="bp-field-value">Fri, May 9</div></div><div class="bp-field"><div class="bp-field-label">Departs</div><div class="bp-field-value">09:15 AM</div></div></div>
+              <div class="bp-row"><div class="bp-field"><div class="bp-field-label">Arrives</div><div class="bp-field-value">09:40 PM</div></div><div class="bp-field"><div class="bp-field-label">Duration</div><div class="bp-field-value">7h 25m</div></div></div>
+              <div class="bp-barcode" id="barcode"></div>
+            </div>
+          </div>
+          <div class="bp-price-badge" id="bpprice" style="position:absolute;top:12px;right:12px;">$649 ✓</div>
+        </div>
+        <div class="input-bar">
+          <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+          <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+        </div>
+      </div>
+      <p class="screenshot-label">Booking Flights</p>
+    </div>
+    <div class="screenshot-item">
+      <div class="shell" id="p3">
+        <div class="phone-bar">
+          <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+          <div><div class="bar-name">Assistant</div><div class="bar-sub">AI Agent</div></div>
+        </div>
+        <div class="chat-bg">
+          <div class="email-compose">
+            <div class="email-compose-header">✉️ Drafting email...</div>
+            <div class="ec-field"><div class="ec-label">To</div><div class="ec-value">sarah@acme.com</div></div>
+            <div class="ec-field"><div class="ec-label">Sub</div><div class="ec-value">Re: Q2 Proposal</div></div>
+            <div class="ec-body"><div class="ec-text" id="email-text"></div><span class="cursor" id="email-cursor"></span></div>
+          </div>
+          <div class="send-btn" id="send-btn">Send Email →</div>
+        </div>
+        <div class="input-bar">
+          <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+          <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+        </div>
+      </div>
+      <p class="screenshot-label">Drafting Emails</p>
+    </div>
+    <div class="screenshot-item">
+      <div class="shell" id="p4">
+        <div class="phone-bar">
+          <div class="phone-avatar"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+          <div><div class="bar-name">Assistant</div><div class="bar-sub">AI Agent</div></div>
+        </div>
+        <div class="chat-bg">
+          <div class="auto-title">Your automations</div>
+          <div class="auto-subtitle">Running in the background</div>
+          <div class="auto-card">
+            <div class="auto-row"><div class="auto-icon-wrap" style="background:#e8f5e9">📊</div><div class="auto-info"><div class="auto-name">Weekly report</div><div class="auto-desc">Every Mon, 8 AM</div></div><div class="toggle" id="t1"></div></div>
+            <div class="auto-row"><div class="auto-icon-wrap" style="background:#fff3e0">📰</div><div class="auto-info"><div class="auto-name">Morning briefing</div><div class="auto-desc">Daily, 7 AM</div></div><div class="toggle" id="t2"></div></div>
+            <div class="auto-row"><div class="auto-icon-wrap" style="background:#e8f0fe">📋</div><div class="auto-info"><div class="auto-name">Invoice reminder</div><div class="auto-desc">Every Fri, 5 PM</div></div><div class="toggle" id="t3"></div></div>
+            <div class="auto-row"><div class="auto-icon-wrap" style="background:#fce7f3">📧</div><div class="auto-info"><div class="auto-name">Email digest</div><div class="auto-desc">Weekdays, 9 AM</div></div><div class="toggle" id="t4"></div></div>
+          </div>
+          <div class="auto-summary" id="auto-summary"><div>⚡</div><div class="auto-summary-text">4 automations active — running on autopilot</div></div>
+        </div>
+        <div class="input-bar">
+          <div class="input-pill"><span class="input-pill-text">Send a message...</span><div class="input-emoji"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#737373" stroke-width="1.2"/><circle cx="5.5" cy="6.5" r="1" fill="#737373"/><circle cx="10.5" cy="6.5" r="1" fill="#737373"/><path d="M5 10c0.5 1.5 5.5 1.5 6 0" stroke="#737373" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+          <div class="input-right-icons"><div class="input-mic"><svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="0" width="4" height="7" rx="2" fill="white"/><path d="M1 5.5C1 7.98 2.79 10 5 10s4-2.02 4-4.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><line x1="5" y1="10" x2="5" y2="12" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div></div>
+        </div>
+      </div>
+      <p class="screenshot-label">Automating Tasks</p>
+    </div>
+  </div>
+  <a href="ai.html" class="btn-secondary">AI Features →</a>
+</section>
+
+<!-- Still a Messenger -->
+<section class="section section-white" style="display:flex;gap:80px;align-items:center;min-height:600px;">
+  <div class="feature-content">
+    <div class="feature-header">
+      <span class="pill">Messaging</span>
+      <h2 class="section-title">Talk to humans too.</h2>
+    </div>
+    <div class="feature-item">
+      <p class="feature-item-title">Group chats</p>
+      <p class="feature-item-text">Text, media, links. The basics, done right.</p>
+    </div>
+    <div class="feature-item">
+      <p class="feature-item-title">Voice &amp; video calls</p>
+      <p class="feature-item-text">Crystal clear, cross-platform.</p>
+    </div>
+    <div class="feature-item">
+      <p class="feature-item-title">Works everywhere</p>
+      <p class="feature-item-text">iOS, Android, Mac, Windows, Web. One account, all devices.</p>
+    </div>
+    <div class="feature-item">
+      <p class="feature-item-title">Private by default</p>
+      <p class="feature-item-text">Your conversations are yours.</p>
+    </div>
+    <a href="messaging.html" class="btn-secondary" style="align-self:flex-start;">Messaging →</a>
+  </div>
+  <div class="mockup mockup-feature"></div>
+</section>
+
+<!-- How It Works -->
+<section class="section section-light" style="display:flex;flex-direction:column;align-items:center;gap:60px;">
+  <h2 class="section-title" style="text-align:center;">Ready in 15 seconds.</h2>
+  <div class="steps">
+    <div class="step">
+      <p class="step-num">01</p>
+      <p class="step-title">Download Vama</p>
+      <p class="step-text">Or open it on the web. No account setup beyond a phone number.</p>
+    </div>
+    <div class="step">
+      <p class="step-num">02</p>
+      <p class="step-title">Activate your agent</p>
+      <p class="step-text">One tap. Your AI appears in your contact list like any other conversation.</p>
+    </div>
+    <div class="step">
+      <p class="step-num">03</p>
+      <p class="step-title">Start asking</p>
+      <p class="step-text">Type naturally. Your agent understands context and gets smarter over time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section section-white" style="display:flex;flex-direction:column;align-items:center;gap:40px;">
+  <h2 style="font-size:40px;font-weight:700;color:var(--black);text-align:center;">Free to start. Pay only when you want more.</h2>
+  <div class="pricing-grid">
+    <!-- Free -->
+    <div class="card pricing-card" style="display:flex;flex-direction:column;gap:16px;">
+      <p class="price-tier">Free</p>
+      <p class="price-amount">$0</p>
+      <p class="price-period">forever</p>
+      <div class="price-divider"></div>
+      <p class="price-feature">Unlimited messaging</p>
+      <p class="price-feature">Google Gemini (AI model)</p>
+      <p class="price-feature">All 40,000+ skills</p>
+      <p class="price-feature">Voice &amp; video calls</p>
+      <p class="price-feature">All platforms</p>
+      <a href="#" class="btn-sm-primary" style="margin-top:8px;">Try Vama</a>
+    </div>
+    <!-- Premium -->
+    <div class="card-dark pricing-card" style="display:flex;flex-direction:column;gap:16px;">
+      <p class="price-tier-dark">Premium</p>
+      <p class="price-amount-dark">$5 free credit</p>
+      <p class="price-period-dark">then pay per use · no subscription</p>
+      <div class="price-divider-dark"></div>
+      <p class="price-feature-dark">Everything in Free</p>
+      <p class="price-feature-dark">Claude Sonnet &amp; Opus</p>
+      <p class="price-feature-dark">Priority responses</p>
+      <p class="price-feature-dark">Extended context</p>
+      <p class="price-feature-dark">Early access to new skills</p>
+      <a href="#" class="btn-sm-white" style="margin-top:8px;">Upgrade</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer CTA -->
+<div class="footer-cta">
+  <p class="footer-cta-title">Your next assistant is<br>already in your chat.</p>
+  <a href="#" class="btn-white">Download the App today</a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-left">
+    <div class="footer-logo">
+      <img src="assets/logo-mark.svg" alt="Vama" />
+    </div>
+    <p class="footer-copy">© 2026 Vama Int Pte. Ltd.</p>
+  </div>
+  <div class="footer-spacer"></div>
+  <nav class="footer-links">
+    <div class="footer-col">
+      <p class="footer-col-title">Product</p>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Download</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Company</p>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Legal</p>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Social</p>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </nav>
+</footer>
+
+<script src="download-modal.js"></script>
+<script src="ai-assets.js" defer></script>
+</body>
+</html>

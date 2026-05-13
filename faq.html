@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Vama</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><svg width="48" height="48" viewBox="0 0 53.5217 53.5217" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.2442 0H5.27747C2.36281 0 0 2.36281 0 5.27747V48.2442C0 51.1589 2.36281 53.5217 5.27747 53.5217H48.2442C51.1589 53.5217 53.5217 51.1589 53.5217 48.2442V5.27747C53.5217 2.36281 51.1589 0 48.2442 0Z" fill="#0071EE"/><path fill-rule="evenodd" clip-rule="evenodd" d="M37.4652 10.704C38.5238 10.704 39.5587 11.0181 40.4387 11.6059C41.3187 12.1937 42.005 13.0299 42.4101 14.0076C42.8151 14.9853 42.9212 16.0615 42.7149 17.0998C42.5086 18.1381 41.9983 19.0914 41.2505 19.84C40.5019 20.5886 39.5486 21.0981 38.5103 21.3044C37.472 21.5108 36.3958 21.4046 35.4181 20.9996C34.4404 20.5945 33.6042 19.9082 33.0164 19.0282C32.4286 18.1482 32.1145 17.1133 32.1145 16.0548C32.1145 14.635 32.6787 13.2741 33.6825 12.2703C34.6863 11.2665 36.0471 10.7023 37.4669 10.7023L37.4652 10.704Z" fill="#FCFCFC"/><path d="M13.6606 11.2692C16.3018 9.94774 19.5197 11.0195 20.8411 13.6606L31.5501 35.0646C32.8715 37.7057 31.8006 40.9233 29.1587 42.2451C26.5175 43.5665 23.2996 42.4948 21.9782 39.8536L11.2688 18.4489C9.94739 15.8078 11.0184 12.5902 13.6602 11.2684L13.6606 11.2692Z" fill="#FCFCFC"/></svg></a>
+  <div class="nav-spacer"></div>
+  <div class="nav-links">
+    <a href="ai.html">AI Agent</a>
+    <a href="messaging.html">Messaging</a>
+    <a href="wallet.html">Wallet</a>
+    <a href="faq.html" class="active">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="nav-cta">Try Vama</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="section section-light" style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+  <span class="pill">FAQ</span>
+  <h1 class="page-hero-title" style="max-width:720px;">Got questions?<br>We've got answers.</h1>
+  <p class="section-sub" style="max-width:580px;">Everything you need to know about Vama — the app, the AI, the wallet, and more.</p>
+</section>
+
+<!-- FAQ Body -->
+<section class="section section-white" style="padding-top:80px;padding-bottom:80px;">
+  <div class="faq-layout">
+    <!-- Sidebar -->
+    <aside class="faq-sidebar">
+      <p class="faq-sidebar-label">Jump to</p>
+      <div class="faq-sidebar-item active" onclick="scrollToSection('general')">
+        <div class="dot"></div>
+        <span class="label">General</span>
+      </div>
+      <div class="faq-sidebar-item" onclick="scrollToSection('ai-agent')">
+        <div class="dot"></div>
+        <span class="label">AI Agent</span>
+      </div>
+      <div class="faq-sidebar-item" onclick="scrollToSection('messaging')">
+        <div class="dot"></div>
+        <span class="label">Messaging</span>
+      </div>
+      <div class="faq-sidebar-item" onclick="scrollToSection('wallet')">
+        <div class="dot"></div>
+        <span class="label">Wallet</span>
+      </div>
+      <div class="faq-sidebar-item" onclick="scrollToSection('account')">
+        <div class="dot"></div>
+        <span class="label">Account &amp; Privacy</span>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <div class="faq-content">
+
+      <!-- General -->
+      <div id="general" class="faq-section">
+        <p class="faq-section-title">General</p>
+        <div class="faq-items">
+          <div class="faq-item open">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">What is Vama?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Vama is a cross-platform messaging app with a built-in AI agent. Chat, call, share media, and manage tasks — all in one app. Available on iOS, Android, Mac, Windows, and web.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Is Vama free?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Yes. Messaging, calls, and the basic AI agent (powered by Google Gemini) are free. Premium AI models — Claude Sonnet and Claude Opus — come with $5 in free credit. After that, pay only for what you use with no subscription required.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">What platforms is Vama available on?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Vama is available on iOS, Android, macOS, Windows, and any web browser. Your account syncs seamlessly across all devices.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">How do I get started?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Download Vama from the App Store, Google Play, or vama.com. Sign up with your phone number — no email required. Your AI agent activates in one tap.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Agent -->
+      <div id="ai-agent" class="faq-section">
+        <p class="faq-section-title">AI Agent</p>
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">What can the AI agent do?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Your agent can manage email, research anything, draft messages, book appointments, automate tasks, and connect to 150+ apps. It has access to 40,000+ skills — just ask naturally.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Which AI models are available?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Vama supports Google Gemini (always free), Claude Sonnet, and Claude Opus. Claude models include $5 in free credit to start — after that, pay per use with no subscription. Switch models anytime in settings.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Can I have multiple agents?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Yes. You can create multiple AI agents in Vama, each as its own contact. Assign different agents to different jobs — work, personal, research, and more.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Is my conversation with the agent private?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Yes. Agent conversations are private and not used to train AI models. We do not share your data with third parties.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messaging -->
+      <div id="messaging" class="faq-section">
+        <p class="faq-section-title">Messaging</p>
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Is Vama end-to-end encrypted?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Yes. All messages and calls are end-to-end encrypted by default. Only you and your recipients can read your conversations.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Can I make group calls?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Yes. Vama supports group voice and video calls with up to 32 participants. Screen sharing is available during any call.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Does Vama support disappearing messages?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Yes. You can set any conversation to auto-delete messages after a time period of your choosing.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">How do I switch to a new phone?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Sign in with your phone number on your new device and your account — messages and settings — restores automatically. No manual backup needed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wallet -->
+      <div id="wallet" class="faq-section">
+        <p class="faq-section-title">Wallet</p>
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">When is Vama Wallet launching?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Vama Wallet is coming soon. Join the waitlist at vama.com/wallet to get notified and receive early access when it launches.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Will Wallet be free to use?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Yes. Sending and receiving money on Vama Wallet is always free. No transfer fees, no hidden charges.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">How does bank linking work?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Vama Wallet uses Plaid — an encrypted, bank-grade integration — to securely connect your bank account for adding or withdrawing funds.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">What countries will Wallet be available in?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Vama Wallet launches in the US first, with more regions to follow. Join the waitlist to stay updated on availability in your country.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account & Privacy -->
+      <div id="account" class="faq-section">
+        <p class="faq-section-title">Account &amp; Privacy</p>
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">How do I change my phone number?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Go to Settings → Account → Phone Number. You'll need access to your current number to verify the change before switching.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">How do I delete my account?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Go to Settings → Account → Delete Account. Deletion is permanent. You have a 45-day window to restore your account after requesting deletion.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">What happens when I delete my account?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">Your profile, messages, and data are permanently deleted. You'll be removed from all groups. Content shared in conversations may remain visible to others.</p>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question-row" onclick="toggleFaq(this)">
+              <p class="faq-question">Does Vama sell my data?</p>
+              <div class="faq-chevron">▾</div>
+            </div>
+            <div class="faq-divider"></div>
+            <p class="faq-answer">No. Vama does not sell personal data or scan messages for advertising. Privacy is a core part of how we build the product.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Still Have Questions -->
+<div class="still-questions">
+  <p class="still-title">Still have questions?</p>
+  <p class="still-text">Our support team usually responds within a few hours.</p>
+  <div class="hero-buttons">
+    <a href="contact.html" class="btn-primary">Contact Support</a>
+    <a href="#" class="btn-secondary">Visit Help Center</a>
+  </div>
+</div>
+
+<!-- Footer CTA -->
+<div class="footer-cta">
+  <p class="footer-cta-title">Your next assistant is<br>already in your chat.</p>
+  <a href="#" class="btn-white">Download the App today</a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-left">
+    <div class="footer-logo">
+      <img src="assets/logo-mark.svg" alt="Vama" />
+    </div>
+    <p class="footer-copy">© 2026 Vama Int Pte. Ltd.</p>
+  </div>
+  <div class="footer-spacer"></div>
+  <nav class="footer-links">
+    <div class="footer-col">
+      <p class="footer-col-title">Product</p>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Download</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Company</p>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Legal</p>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Social</p>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </nav>
+</footer>
+
+<script>
+function toggleFaq(row) {
+  const item = row.closest('.faq-item');
+  item.classList.toggle('open');
+}
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.querySelectorAll('.faq-sidebar-item').forEach(el => el.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+}
+</script>
+
+<script src="download-modal.js"></script>
+</body>
+</html>
