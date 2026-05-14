@@ -240,6 +240,9 @@
 </style>
 <style>
 /* Hero animation */
+#app, #app * { text-align: left; }
+.mr.out { justify-content: flex-end; }
+.bub.out .bub-meta { text-align: right; }
 .tb { height:36px; background:#ececec; border-bottom:1px solid #ddd; display:flex; align-items:center; padding:0 14px; gap:8px; flex-shrink:0; }
 .tb-dots { display:flex; gap:6px; }
 .tbd { width:12px; height:12px; border-radius:50%; }
@@ -268,10 +271,10 @@
 .sbt-lbl { font-size:10px; font-weight:500; }
 .sbt.on .sbt-lbl { color:#0071EE; } .sbt:not(.on) .sbt-lbl { color:#bbb; }
 .panel { flex:1; display:flex; flex-direction:column; }
-.panel-head { height:54px; border-bottom:1px solid #ebebeb; display:flex; align-items:center; padding:0 18px; gap:10px; flex-shrink:0; }
+.panel-head { height:54px; border-bottom:1px solid #ebebeb; display:flex; align-items:center; padding:0 18px; gap:10px; flex-shrink:0; text-align:left; }
 .ph-av { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; flex-shrink:0; }
-.ph-name { font-size:14px; font-weight:600; color:#1C1C1C; }
-.ph-status { font-size:11px; color:#aaa; margin-top:1px; }
+.ph-name { font-size:14px; font-weight:600; color:#1C1C1C; text-align:left; }
+.ph-status { font-size:11px; color:#aaa; margin-top:1px; text-align:left; }
 .ph-actions { margin-left:auto; display:flex; gap:18px; }
 .ph-action { color:#aaa; display:flex; }
 .msgs { flex:1; background-color:#f4f8ff; background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230071EE' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E"); padding:16px 20px; display:flex; flex-direction:column; justify-content:flex-end; gap:7px; overflow:hidden; position:relative; }
@@ -280,7 +283,7 @@
 .mav { width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:8px; font-weight:700; color:#fff; flex-shrink:0; }
 .bub { max-width:62%; padding:9px 13px; font-size:13px; line-height:1.45; border-radius:18px; }
 .bub.in { background:#fff; color:#1C1C1C; border-radius:4px 18px 18px 18px; box-shadow:0 1px 3px rgba(0,0,0,0.07); }
-.bub.out { background:#0071EE; color:#fff; border-radius:18px 4px 18px 18px; }
+.bub.out { background:#0071EE; color:#fff; border-radius:18px 4px 18px 18px; text-align:left; }
 .bub-meta { font-size:10px; margin-top:3px; opacity:0.5; text-align:right; }
 .trow { display:flex; gap:7px; align-items:flex-end; }
 .tbub { background:#fff; border-radius:4px 18px 18px 18px; padding:9px 13px; display:flex; gap:4px; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,0.07); }
@@ -297,9 +300,9 @@
 .cc-lbl{color:#999} .cc-val{color:#1C1C1C;font-weight:500}
 .ibar { border-top:1px solid #ebebeb; padding:8px 14px 10px; display:flex; align-items:flex-end; gap:8px; background:#fff; flex-shrink:0; }
 .ib-plus { width:26px; height:26px; border-radius:50%; border:1.5px solid #ddd; display:flex; align-items:center; justify-content:center; color:#ccc; font-size:15px; flex-shrink:0; }
-.ib-pill { flex:1; background:#f2f2f2; border-radius:20px; padding:8px 38px 8px 12px; font-size:12.5px; line-height:1.45; color:#bbb; position:relative; min-width:0; word-break:break-word; }
-.ib-placeholder { color:#bbb; }
-.ib-typed { color:#1C1C1C; }
+.ib-pill { flex:1; background:#f2f2f2; border-radius:20px; padding:8px 38px 8px 12px; font-size:12.5px; line-height:1.45; color:#bbb; position:relative; min-width:0; word-break:break-word; text-align:left; }
+.ib-placeholder { color:#bbb; text-align:left; display:block; }
+.ib-typed { color:#1C1C1C; text-align:left; display:block; }
 .ib-emoji { position:absolute; right:10px; bottom:8px; color:#bbb; display:flex; align-items:center; }
 .ib-mic { width:30px; height:30px; border-radius:50%; background:#0071EE; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 </style>
@@ -329,7 +332,6 @@
     <a href="#" class="btn-secondary">Download the App</a>
   </div>
   <div class="hero-animation-wrap">
-    <div class="hero-glow"></div>
     <div class="hero-desktop" id="app">
 
       <!-- titlebar -->

@@ -219,38 +219,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 48px 40px;
 }
 
-.hero-glow {
-  position: absolute;
-  width: 140%;
-  height: 200%;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(0, 113, 238, 0.5) 0%,
-    rgba(0, 113, 238, 0.25) 25%,
-    rgba(0, 113, 238, 0.08) 50%,
-    transparent 70%
-  );
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(40px);
-  animation: glowpulse 4s ease-in-out infinite;
-}
-
-@keyframes glowpulse {
-  0%,100% { opacity: 0.9; transform: translate(-50%,-50%) scale(1); }
-  50% { opacity: 1; transform: translate(-50%,-50%) scale(1.06); }
-}
-
 .hero-desktop {
   width: 1000px;
   height: 560px;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 40px 120px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06), 0 0 60px rgba(0,113,238,0.15);
+  box-shadow:
+    0 0 60px 20px rgba(0, 113, 238, 0.4),
+    0 0 120px 40px rgba(0, 113, 238, 0.2),
+    0 40px 80px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   position: relative;
