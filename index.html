@@ -238,6 +238,71 @@
 .vanish.gone { opacity: 0; transform: scale(0.85) translateX(30px); max-height: 0; margin: 0 !important; padding: 0 !important; }
 .timer-tag { font-size: 10px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 3px; margin-top: 4px; }
 </style>
+<style>
+/* Hero animation */
+.tb { height:36px; background:#ececec; border-bottom:1px solid #ddd; display:flex; align-items:center; padding:0 14px; gap:8px; flex-shrink:0; }
+.tb-dots { display:flex; gap:6px; }
+.tbd { width:12px; height:12px; border-radius:50%; }
+.tbd.r{background:#ff5f57;} .tbd.y{background:#febc2e;} .tbd.g{background:#28c840;}
+.tb-url { flex:1; max-width:260px; margin:0 auto; background:#e2e2e2; border-radius:5px; height:20px; display:flex; align-items:center; padding:0 8px; font-size:11px; color:#666; gap:4px; }
+.app { display:flex; flex:1; overflow:hidden; }
+.sidebar { width:272px; border-right:1px solid #ebebeb; display:flex; flex-direction:column; flex-shrink:0; background:#fff; }
+.sb-head { padding:12px 14px 8px; }
+.sb-title { font-size:17px; font-weight:700; color:#1C1C1C; display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.sb-search { background:#f2f2f2; border-radius:8px; padding:6px 10px; font-size:12px; color:#aaa; display:flex; align-items:center; gap:5px; }
+.sb-tabs { display:flex; padding:6px 14px 0; border-bottom:1px solid #ebebeb; }
+.sb-tab { font-size:13px; font-weight:500; padding:4px 0 7px; margin-right:16px; color:#aaa; border-bottom:2px solid transparent; }
+.sb-tab.on { color:#0071EE; border-bottom-color:#0071EE; }
+.chat-list { flex:1; }
+.ci { display:flex; align-items:center; gap:10px; padding:10px 14px; cursor:default; position:relative; transition:background 0.25s; }
+.ci.active { background:#eef5ff; }
+.ci-av { width:40px; height:40px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; color:#fff; }
+.ci-info { flex:1; min-width:0; }
+.ci-name { font-size:13px; font-weight:600; color:#1C1C1C; display:flex; justify-content:space-between; margin-bottom:2px; }
+.ci-time { font-size:11px; font-weight:400; color:#bbb; }
+.ci-preview { font-size:12px; color:#aaa; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:155px; }
+.badge { min-width:18px; height:18px; border-radius:9px; background:#0071EE; color:#fff; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; padding:0 4px; flex-shrink:0; opacity:0; transform:scale(0.4); transition:opacity 0.3s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1); }
+.badge.show { opacity:1; transform:scale(1); }
+.sb-bottom { border-top:1px solid #ebebeb; display:flex; justify-content:space-around; padding:8px 0 10px; }
+.sbt { display:flex; flex-direction:column; align-items:center; gap:2px; }
+.sbt-lbl { font-size:10px; font-weight:500; }
+.sbt.on .sbt-lbl { color:#0071EE; } .sbt:not(.on) .sbt-lbl { color:#bbb; }
+.panel { flex:1; display:flex; flex-direction:column; }
+.panel-head { height:54px; border-bottom:1px solid #ebebeb; display:flex; align-items:center; padding:0 18px; gap:10px; flex-shrink:0; }
+.ph-av { width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; flex-shrink:0; }
+.ph-name { font-size:14px; font-weight:600; color:#1C1C1C; }
+.ph-status { font-size:11px; color:#aaa; margin-top:1px; }
+.ph-actions { margin-left:auto; display:flex; gap:18px; }
+.ph-action { color:#aaa; display:flex; }
+.msgs { flex:1; background-color:#f4f8ff; background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230071EE' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E"); padding:16px 20px; display:flex; flex-direction:column; gap:7px; overflow:hidden; position:relative; }
+.mr { display:flex; gap:7px; align-items:flex-end; }
+.mr.out { flex-direction:row-reverse; }
+.mav { width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:8px; font-weight:700; color:#fff; flex-shrink:0; }
+.bub { max-width:62%; padding:9px 13px; font-size:13px; line-height:1.45; border-radius:18px; }
+.bub.in { background:#fff; color:#1C1C1C; border-radius:4px 18px 18px 18px; box-shadow:0 1px 3px rgba(0,0,0,0.07); }
+.bub.out { background:#0071EE; color:#fff; border-radius:18px 4px 18px 18px; }
+.bub-meta { font-size:10px; margin-top:3px; opacity:0.5; text-align:right; }
+.trow { display:flex; gap:7px; align-items:flex-end; }
+.tbub { background:#fff; border-radius:4px 18px 18px 18px; padding:9px 13px; display:flex; gap:4px; align-items:center; box-shadow:0 1px 3px rgba(0,0,0,0.07); }
+.td { width:6px; height:6px; border-radius:50%; background:#ccc; animation:td 1.2s infinite; }
+.td:nth-child(2){animation-delay:0.18s} .td:nth-child(3){animation-delay:0.36s}
+.bot-note { display:flex; align-items:flex-start; gap:8px; background:rgba(0,113,238,0.07); border:1px solid rgba(0,113,238,0.18); border-radius:12px; padding:10px 13px; margin:2px 0; max-width:75%; }
+.bn-icon { width:20px; height:20px; border-radius:50%; background:#0071EE; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+.bn-text { font-size:12px; font-weight:500; color:#0052BB; line-height:1.45; }
+.bn-label { font-size:10px; color:rgba(0,113,238,0.55); margin-top:3px; font-style:italic; }
+.cal-card { background:#fff; border-radius:10px; border:1px solid #E5E5E5; overflow:hidden; max-width:220px; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+.cc-head { background:#0071EE; padding:7px 11px; font-size:11px; font-weight:600; color:#fff; display:flex; align-items:center; gap:5px; }
+.cc-row { display:flex; justify-content:space-between; padding:5px 11px; border-bottom:1px solid #f5f5f5; font-size:11px; }
+.cc-row:last-child{border-bottom:none}
+.cc-lbl{color:#999} .cc-val{color:#1C1C1C;font-weight:500}
+.ibar { border-top:1px solid #ebebeb; padding:8px 14px 10px; display:flex; align-items:flex-end; gap:8px; background:#fff; flex-shrink:0; }
+.ib-plus { width:26px; height:26px; border-radius:50%; border:1.5px solid #ddd; display:flex; align-items:center; justify-content:center; color:#ccc; font-size:15px; flex-shrink:0; }
+.ib-pill { flex:1; background:#f2f2f2; border-radius:20px; padding:8px 38px 8px 12px; font-size:12.5px; line-height:1.45; color:#bbb; position:relative; min-width:0; word-break:break-word; }
+.ib-placeholder { color:#bbb; }
+.ib-typed { color:#1C1C1C; }
+.ib-emoji { position:absolute; right:10px; bottom:8px; color:#bbb; display:flex; align-items:center; }
+.ib-mic { width:30px; height:30px; border-radius:50%; background:#0071EE; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+</style>
 </head>
 <body>
 
@@ -256,92 +321,137 @@
 </nav>
 
 <!-- Hero -->
-<section class="hero-two-col">
-  <!-- Left: copy + CTAs -->
-  <div class="hero-left">
-    <h1 class="hero-title hero-title-left" style="max-width:570px;">The Messenger with Built-In OpenClaw</h1>
-    <p class="hero-sub hero-sub-left" style="max-width:570px;">Chat with the people you love. Let OpenClaw handle the rest — email, research, scheduling, tasks. All without leaving the app.</p>
-    <div class="hero-buttons">
-      <a href="#" class="btn-primary">Try Vama — Free</a>
-      <a href="#" class="btn-secondary">Download the App</a>
-    </div>
+<section class="hero-centered">
+  <h1 class="hero-title" style="max-width:972px;">The Messenger with Built-In OpenClaw</h1>
+  <p class="hero-sub" style="max-width:680px; margin-top:20px;">Chat with the people you love. Let OpenClaw handle the rest — email, research, scheduling, tasks. All without leaving the app.</p>
+  <div class="hero-buttons" style="margin-top:40px;">
+    <a href="#" class="btn-primary">Try Vama — Free</a>
+    <a href="#" class="btn-secondary">Download the App</a>
   </div>
-  <!-- Right: phone + floating chat bubbles -->
-  <div class="hero-visual">
-    <!-- Phone mockup (bottom layer) -->
-    <img src="assets/hero-phone.jpg" class="hero-phone" alt="Vama app">
-    <!-- Sent: reply bubble -->
-    <div class="hb-sent">
-      <div class="hb-sent-reply">
-        <div class="hb-sent-reply-line"></div>
-        <div class="hb-sent-reply-text">
-          <p class="hb-sent-reply-from">John</p>
-          <p class="hb-sent-reply-preview">I just got us tickets to that concert...</p>
+  <div class="hero-animation-wrap">
+    <div class="hero-glow"></div>
+    <div class="hero-desktop" id="app">
+
+      <!-- titlebar -->
+      <div class="tb">
+        <div class="tb-dots"><div class="tbd r"></div><div class="tbd y"></div><div class="tbd g"></div></div>
+        <div class="tb-url">
+          <svg width="9" height="11" viewBox="0 0 9 11" fill="none"><rect x="0.5" y="4" width="8" height="6.5" rx="1.5" stroke="#888" stroke-width="1"/><path d="M2 4V3a2.5 2.5 0 015 0v1" stroke="#888" stroke-width="1" stroke-linecap="round"/></svg>
+          vama.com/chats
         </div>
       </div>
-      <p class="hb-sent-msg">No way! This is going to be the best night ever! 🎉</p>
-      <div class="hb-sent-footer">
-        <div class="hb-reactions">
-          <span class="hb-reaction">🔥 4</span>
-          <span class="hb-reaction hb-reaction-sel">😊 2</span>
+
+      <div class="app">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+          <div class="sb-head">
+            <div class="sb-title">Chats
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 3v11M3 8.5h11" stroke="#0071EE" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div class="sb-search">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="5" cy="5" r="4" stroke="#bbb" stroke-width="1.4"/><path d="M8.5 8.5l2.5 2.5" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg>
+              Search
+            </div>
+          </div>
+          <div class="sb-tabs">
+            <div class="sb-tab on">All Chats</div>
+            <div class="sb-tab">Unread</div>
+          </div>
+          <div class="chat-list">
+            <div class="ci active" id="ci-s">
+              <div class="ci-av" style="background:linear-gradient(135deg,#f59e0b,#d97706)">S</div>
+              <div class="ci-info">
+                <div class="ci-name">Sarah <span class="ci-time" id="s-time">12:41 PM</span></div>
+                <div class="ci-preview" id="s-prev">Hey! Still on for Thursday?</div>
+              </div>
+              <div class="badge" id="s-badge">1</div>
+            </div>
+            <div class="ci" id="ci-oc">
+              <div class="ci-av" style="background:linear-gradient(135deg,#0071EE,#0052cc); position:relative;">
+                <svg width="18" height="18" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg>
+                <div style="position:absolute;bottom:-1px;right:-1px;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid #fff;"></div>
+              </div>
+              <div class="ci-info">
+                <div class="ci-name">Assistant <span class="ci-time" id="oc-time">12:38 PM</span></div>
+                <div class="ci-preview" id="oc-prev">Ready to help</div>
+              </div>
+              <div class="badge" id="oc-badge">1</div>
+            </div>
+            <div class="ci" id="ci-d">
+              <div class="ci-av" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)">D</div>
+              <div class="ci-info">
+                <div class="ci-name">Daniel <span class="ci-time">11:20 AM</span></div>
+                <div class="ci-preview">The concert is at 7pm...</div>
+              </div>
+            </div>
+            <div class="ci">
+              <div class="ci-av" style="background:#1C1C1C">N</div>
+              <div class="ci-info">
+                <div class="ci-name">Nike Running Group <span class="ci-time">10:15 AM</span></div>
+                <div class="ci-preview">Peter: Anyone up for training?</div>
+              </div>
+            </div>
+            <div class="ci">
+              <div class="ci-av" style="background:linear-gradient(135deg,#ef4444,#dc2626)">J</div>
+              <div class="ci-info">
+                <div class="ci-name">Jerry <span class="ci-time">9:51 AM</span></div>
+                <div class="ci-preview">Thanks!</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sb-bottom">
+            <div class="sbt on">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#0071EE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="sbt-lbl">Chats</span>
+            </div>
+            <div class="sbt">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" stroke="#bbb" stroke-width="1.6"/></svg>
+              <span class="sbt-lbl">Calls</span>
+            </div>
+            <div class="sbt">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="3" stroke="#bbb" stroke-width="1.6"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" stroke="#bbb" stroke-width="1.6"/></svg>
+              <span class="sbt-lbl">Settings</span>
+            </div>
+          </div>
         </div>
-        <div class="hb-sent-time-wrap">
-          <span>2:55 PM</span>
-          <img src="assets/icon-checkmark-double.svg" width="20" height="20" alt="">
-        </div>
-      </div>
-      <img src="assets/chat-tail-sent.svg" class="hb-sent-tail" alt="">
-    </div>
-    <!-- Received: incoming video call -->
-    <div class="hb-call">
-      <div class="hb-call-inner">
-        <div>
-          <p class="hb-call-title">Incoming Video Call</p>
-          <p class="hb-call-sub">9:40 AM, 1 Hour 2 Minutes</p>
-        </div>
-        <div class="hb-call-icon-wrap">
-          <div class="hb-call-icon-pos">
-            <img src="assets/icon-video.svg" alt="">
+
+        <!-- CHAT PANEL -->
+        <div class="panel" id="panel">
+          <div class="panel-head" id="ph">
+            <div class="ph-av" id="ph-av" style="background:linear-gradient(135deg,#f59e0b,#d97706)">S</div>
+            <div>
+              <div class="ph-name" id="ph-name">Sarah</div>
+              <div class="ph-status" id="ph-status">Active now</div>
+            </div>
+            <div class="ph-actions">
+              <div class="ph-action">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17 12.92v2a1.33 1.33 0 01-1.45 1.33A13.2 13.2 0 019.3 14.2 12.99 12.99 0 014.8 9.7 13.2 13.2 0 012.75 3.5 1.33 1.33 0 014.07 2.08h2a1.33 1.33 0 011.33 1.15c.085.64.24 1.27.46 1.87a1.33 1.33 0 01-.3 1.4L6.59 7.49a10.67 10.67 0 004 4l.99-.99a1.33 1.33 0 011.4-.3c.6.22 1.23.374 1.87.46a1.33 1.33 0 011.15 1.36z" stroke="#bbb" stroke-width="1.4"/></svg>
+              </div>
+              <div class="ph-action">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="3" width="12" height="12" rx="2" stroke="#bbb" stroke-width="1.4"/><path d="M13 7l4-3v10l-4-3" stroke="#bbb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="ph-action">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="4" cy="9" r="1.5" fill="#bbb"/><circle cx="9" cy="9" r="1.5" fill="#bbb"/><circle cx="14" cy="9" r="1.5" fill="#bbb"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="msgs" id="msgs"></div>
+
+          <div class="ibar">
+            <div class="ib-plus">+</div>
+            <div class="ib-pill" id="ipill">
+              <span id="iplaceholder" class="ib-placeholder">Send a message..</span><span id="ityped" class="ib-typed"></span>
+              <div class="ib-emoji"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#bbb" stroke-width="1.3"/><circle cx="6.5" cy="7.5" r="1" fill="#bbb"/><circle cx="11.5" cy="7.5" r="1" fill="#bbb"/><path d="M5.5 11.5c.9 1.5 6.1 1.5 7 0" stroke="#bbb" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+            </div>
+            <div class="ib-mic">
+              <svg width="11" height="14" viewBox="0 0 11 14" fill="none"><rect x="3" y="0.5" width="5" height="8" rx="2.5" fill="white"/><path d="M1 7c0 2.5 2 4.5 4.5 4.5S10 9.5 10 7" stroke="white" stroke-width="1.3" stroke-linecap="round"/><line x1="5.5" y1="11.5" x2="5.5" y2="13.5" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </div>
           </div>
         </div>
       </div>
-      <span class="hb-call-time">2:55 PM</span>
-      <img src="assets/chat-tail-received.svg" class="hb-call-tail" alt="">
-    </div>
-    <!-- Deco: lock shield -->
-    <img src="assets/hero-deco.svg" class="hero-deco" alt="">
-    <!-- Voice bubble (topmost layer) -->
-    <div class="hb-voice">
-      <div class="hb-voice-cell">
-        <div class="hb-voice-play">
-          <div class="hb-voice-play-icon"><img src="assets/icon-play.svg" alt=""></div>
-        </div>
-        <div class="hb-voice-wave">
-          <div class="hb-voice-bar" style="height:5px"></div>
-          <div class="hb-voice-bar" style="height:5px"></div>
-          <div class="hb-voice-bar" style="height:5px"></div>
-          <div class="hb-voice-bar" style="height:19px"></div>
-          <div class="hb-voice-bar" style="height:19px"></div>
-          <div class="hb-voice-bar" style="height:19px"></div>
-          <div class="hb-voice-bar" style="height:10px"></div>
-          <div class="hb-voice-bar" style="height:13px"></div>
-          <div class="hb-voice-bar" style="height:5px"></div>
-          <div class="hb-voice-bar" style="height:5px"></div>
-          <div class="hb-voice-bar" style="height:19px"></div>
-          <div class="hb-voice-bar" style="height:19px"></div>
-          <div class="hb-voice-bar" style="height:8px"></div>
-          <div class="hb-voice-bar" style="height:19px"></div>
-          <div class="hb-voice-bar" style="height:16px"></div>
-          <div class="hb-voice-bar" style="height:19px"></div>
-          <div class="hb-voice-bar" style="height:5px"></div>
-          <div class="hb-voice-bar" style="height:16px"></div>
-          <div class="hb-voice-bar" style="height:19px"></div>
-          <div class="hb-voice-bar" style="height:16px"></div>
-          <div class="hb-voice-bar" style="height:5px"></div>
-        </div>
-      </div>
-      <span class="hb-voice-time">2:55 PM</span>
-      <img src="assets/chat-tail-voice.svg" class="hb-voice-tail" alt="">
+
     </div>
   </div>
 </section>
@@ -902,6 +1012,205 @@
 </footer>
 
 <script src="download-modal.js"></script>
+<script>
+/* Hero animation */
+(function() {
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const raf = () => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+const SARAH = {
+  id:'s', color:'linear-gradient(135deg,#f59e0b,#d97706)', initial:'S',
+  name:'Sarah', status:'Active now'
+};
+const OC = {
+  id:'oc', color:'linear-gradient(135deg,#0071EE,#0052cc)', initial:'✦',
+  name:'Assistant', status:'OpenClaw Agent', isSpark:true
+};
+
+let msgs = document.getElementById('msgs');
+let ityped = document.getElementById('ityped');
+let iplaceholder = document.getElementById('iplaceholder');
+
+function clearMsgs() { msgs.innerHTML = ''; }
+
+function addMsg(side, text, meta, color) {
+  const row = document.createElement('div');
+  row.className = `mr ${side} fade`;
+  if (side === 'in') {
+    row.innerHTML = `<div class="mav" style="background:${color}">${color === '#0071EE' ? '<svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg>' : color.includes('f59e0b') ? 'S' : 'O'}</div>
+      <div class="bub in">${text}<div class="bub-meta">${meta}</div></div>`;
+  } else {
+    row.innerHTML = `<div class="bub out">${text}<div class="bub-meta">${meta} ✓✓</div></div>`;
+  }
+  msgs.appendChild(row);
+  raf().then(() => row.classList.add('show'));
+  msgs.scrollTop = msgs.scrollHeight;
+  return row;
+}
+
+function addCalCard(time) {
+  const row = document.createElement('div');
+  row.className = 'mr in fade';
+  row.innerHTML = `
+    <div class="mav" style="background:#0071EE"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+    <div>
+      <div class="cal-card">
+        <div class="cc-head">📅 Event Added to Calendar</div>
+        <div class="cc-row"><span class="cc-lbl">What</span><span class="cc-val">Dinner with Sarah</span></div>
+        <div class="cc-row"><span class="cc-lbl">When</span><span class="cc-val" id="cc-when">Thursday, 7:00 PM</span></div>
+        <div class="cc-row"><span class="cc-lbl">Status</span><span class="cc-val" style="color:#22c55e">✓ Saved</span></div>
+      </div>
+      <div style="font-size:10px;color:#bbb;margin-top:4px;padding-left:2px">${time}</div>
+    </div>`;
+  msgs.appendChild(row);
+  raf().then(() => row.classList.add('show'));
+  msgs.scrollTop = msgs.scrollHeight;
+  return row;
+}
+
+function addBotNote(text) {
+  const el = document.createElement('div');
+  el.className = 'bot-note fade';
+  el.innerHTML = `
+    <div class="bn-icon"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>
+    <div><div class="bn-text">${text}</div><div class="bn-label">Only visible to you</div></div>`;
+  msgs.appendChild(el);
+  raf().then(() => el.classList.add('show'));
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function addTyping(color, isSpark) {
+  const row = document.createElement('div');
+  row.className = 'trow fade';
+  const av = isSpark
+    ? `<div class="mav" style="background:#0071EE"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg></div>`
+    : `<div class="mav" style="background:${color}">S</div>`;
+  row.innerHTML = `${av}<div class="tbub"><div class="td"></div><div class="td"></div><div class="td"></div></div>`;
+  msgs.appendChild(row);
+  raf().then(() => row.classList.add('show'));
+  msgs.scrollTop = msgs.scrollHeight;
+  return row;
+}
+
+async function typeText(text) {
+  const ph = document.getElementById('iplaceholder');
+  ph.style.display = 'none';
+  ityped.textContent = '';
+  for (let i = 0; i < text.length; i++) {
+    ityped.textContent = text.slice(0, i + 1);
+    await wait(30 + Math.random() * 25);
+  }
+  await wait(350);
+  ph.style.display = '';
+  ityped.textContent = '';
+}
+
+function switchPanel(contact) {
+  document.getElementById('ph-av').style.background = contact.color;
+  document.getElementById('ph-av').innerHTML = contact.isSpark
+    ? `<svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5.5L13 7L8.5 8.5L7 13L5.5 8.5L1 7L5.5 5.5L7 1Z" fill="white"/></svg>`
+    : contact.initial;
+  document.getElementById('ph-name').textContent = contact.name;
+  document.getElementById('ph-status').textContent = contact.status;
+  clearMsgs();
+}
+
+function setSidebarActive(id) {
+  document.querySelectorAll('.ci').forEach(el => el.classList.remove('active'));
+  document.getElementById('ci-' + id).classList.add('active');
+}
+
+async function clickSidebar() { await wait(200); }
+
+function updateSidebarPreview(id, text, time, showBadge) {
+  const prevEl = document.getElementById(id === 's' ? 's-prev' : 'oc-prev');
+  const timeEl = document.getElementById(id === 's' ? 's-time' : 'oc-time');
+  const badge  = document.getElementById(id === 's' ? 's-badge' : 'oc-badge');
+  if (prevEl) prevEl.textContent = text;
+  if (timeEl) timeEl.textContent = time;
+  if (badge && showBadge)  badge.classList.add('show');
+  if (badge && !showBadge) badge.classList.remove('show');
+}
+
+async function run() {
+  setSidebarActive('s');
+  switchPanel(SARAH);
+
+  await wait(400);
+  addMsg('in', "Hey! Still on for dinner Thursday at 7pm? 😊", "12:38 PM", SARAH.color);
+  await wait(600);
+
+  await typeText("Yes! Can't wait 🙌");
+  addMsg('out', "Yes! Can't wait 🙌", "12:41 PM", '');
+  updateSidebarPreview('s', "Yes! Can't wait 🙌", '12:41 PM', false);
+  await wait(700);
+
+  let t = addTyping(SARAH.color, false);
+  await wait(1200);
+  t.remove();
+  addMsg('in', "Amazing, see you then! 🎉", "12:41 PM", SARAH.color);
+  updateSidebarPreview('s', "Amazing, see you then! 🎉", '12:41 PM', false);
+
+  await wait(1800);
+
+  await clickSidebar();
+  setSidebarActive('oc');
+  switchPanel(OC);
+  document.getElementById('oc-badge').classList.remove('show');
+  await wait(300);
+
+  addMsg('in', "Hey! I'm ready to help. What do you need?", "12:38 PM", OC.color);
+  await wait(500);
+
+  await typeText("Just confirmed dinner with Sarah, Thursday at 7pm. Add it to my calendar.");
+  addMsg('out', "Just confirmed dinner with Sarah, Thursday at 7pm. Add it to my calendar.", "12:42 PM", '');
+  updateSidebarPreview('oc', "Add it to my calendar.", '12:42 PM', false);
+  await wait(500);
+
+  t = addTyping(OC.color, true);
+  await wait(1100);
+  t.remove();
+  addCalCard("12:42 PM");
+  await wait(800);
+
+  await typeText("Also keep an eye on that chat and let me know if anything changes.");
+  addMsg('out', "Also keep an eye on that chat and let me know if anything changes.", "12:42 PM", '');
+  await wait(500);
+
+  t = addTyping(OC.color, true);
+  await wait(1000);
+  t.remove();
+  addMsg('in', "On it — I'll notify you right here if Sarah updates the plan. 👀", "12:42 PM", OC.color);
+  updateSidebarPreview('oc', "I'll notify you if anything changes", '12:42 PM', false);
+
+  await wait(1600);
+
+  updateSidebarPreview('s', "Can we do 8pm instead?", '12:45 PM', true);
+  await wait(600);
+
+  await clickSidebar();
+  setSidebarActive('s');
+  switchPanel(SARAH);
+  document.getElementById('s-badge').classList.remove('show');
+  await wait(300);
+
+  addMsg('out', "Yes! Can't wait 🙌", "12:41 PM", '');
+  addMsg('in', "Amazing, see you then! 🎉", "12:41 PM", SARAH.color);
+  await wait(400);
+  addMsg('in', "Actually, can we push to 8pm instead? Something came up 🙏", "12:45 PM", SARAH.color);
+  updateSidebarPreview('s', "Can we do 8pm instead?", '12:45 PM', false);
+  await wait(900);
+
+  addBotNote("📅 Calendar updated — Dinner with Sarah moved to 8:00 PM");
+
+  await wait(3000);
+
+  run();
+}
+
+run();
+})();
+</script>
 <script src="ai-assets.js" defer></script>
 <script>
 const wait = ms => new Promise(r => setTimeout(r, ms));
