@@ -210,34 +210,43 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   position: relative;
   width: 100%;
   max-width: 1000px;
-  margin: 60px auto 0;
+  margin: 48px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #0a0a0a;
+  border-radius: 24px;
+  padding: 48px 40px;
 }
 
 .hero-glow {
   position: absolute;
-  width: 110%;
-  height: 130%;
-  background: radial-gradient(ellipse at center, rgba(0,113,238,0.7) 0%, rgba(0,113,238,0.35) 35%, rgba(0,113,238,0.1) 60%, transparent 75%);
-  border-radius: 50%;
+  width: 140%;
+  height: 200%;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(0, 113, 238, 0.5) 0%,
+    rgba(0, 113, 238, 0.25) 25%,
+    rgba(0, 113, 238, 0.08) 50%,
+    transparent 70%
+  );
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 0;
+  filter: blur(40px);
   animation: glowpulse 4s ease-in-out infinite;
 }
 
 @keyframes glowpulse {
-  0%,100% { opacity: 0.85; transform: translate(-50%,-50%) scale(1); }
-  50% { opacity: 1; transform: translate(-50%,-50%) scale(1.1); }
+  0%,100% { opacity: 0.9; transform: translate(-50%,-50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%,-50%) scale(1.06); }
 }
 
 .hero-desktop {
   width: 1000px;
-  height: 500px;
+  height: 560px;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -257,7 +266,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 @media (max-width: 1100px) {
   .hero-animation-wrap { max-width: 90vw; }
-  .hero-desktop { width: 100%; height: auto; aspect-ratio: 1000 / 500; }
+  .hero-desktop { width: 100%; height: auto; aspect-ratio: 1000 / 560; }
 }
 
 @media (max-width: 768px) {
