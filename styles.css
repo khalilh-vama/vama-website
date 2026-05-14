@@ -387,10 +387,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .usecase-text { font-size: 15px; color: var(--gray); line-height: 24px; }
 
 /* ── Privacy cards ── */
-.privacy-grid { display: flex; gap: 24px; width: 100%; }
-.privacy-card { flex: 1 0 0; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
-.privacy-title { font-size: 18px; font-weight: 600; color: var(--black); }
-.privacy-text { font-size: 15px; color: var(--gray); line-height: 1.6; }
 
 /* ── FAQ ── */
 .faq-layout { display: flex; gap: 80px; align-items: flex-start; }
@@ -1020,7 +1016,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* ── Privacy section ─────────────────────────────────────── */
 .privacy-section {
   padding: 80px;
-  background: #FCFCFC;
 }
 .privacy-inner {
   max-width: 1280px;
@@ -1030,25 +1025,19 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin-bottom: 32px;
 }
 .privacy-eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 500;
-  color: #737373;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   margin-bottom: 16px;
 }
 .privacy-headline {
   font-size: 40px;
   font-weight: 700;
-  color: #1C1C1C;
+  color: var(--black);
   letter-spacing: -0.5px;
   line-height: 1.15;
   margin: 0 0 12px;
 }
 .privacy-sub {
   font-size: 16px;
-  color: #737373;
+  color: var(--gray);
   line-height: 1.65;
   max-width: 520px;
   margin: 0;
