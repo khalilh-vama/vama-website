@@ -203,50 +203,32 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .hb-voice-tail { position: absolute; left: -5px; bottom: 0; width: 7px; height: 13px; transform: scaleX(-1); }
 
 /* ── Hero centered (homepage, animation) ── */
-.hero-centered { padding: 120px var(--px) 80px; background: #fff; display: flex; flex-direction: column; align-items: center; text-align: center; }
+/* Hero section — dark bg, blue glow behind animation */
+.hero-centered {
+  padding: 120px var(--px) 0;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(0,113,238,0.55) 0%, rgba(0,113,238,0.2) 35%, transparent 65%),
+    #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero-centered .hero-title { color: #fff; }
+.hero-centered .hero-sub   { color: rgba(255,255,255,0.55); }
+.hero-centered .btn-primary   { background: #fff; color: #1C1C1C; }
+.hero-centered .btn-secondary { background: transparent; border-color: rgba(255,255,255,0.25); color: #fff; }
 
 /* Hero animation wrap */
-.hero-dark-wrap {
-  background: #0a0a0a;
-  width: 100%;
-  margin-top: 48px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
 .hero-animation-wrap {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 48px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border: none;
-  padding: 40px;
-}
-
-.hero-animation-wrap::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(0, 113, 238, 0.45) 0%,
-    rgba(0, 113, 238, 0.2) 30%,
-    rgba(0, 113, 238, 0.05) 60%,
-    transparent 75%
-  );
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  animation: glowpulse 4s ease-in-out infinite;
-}
-
-@keyframes glowpulse {
-  0%,100% { opacity: 0.85; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.06); }
+  padding: 0 0 80px;
 }
 
 .hero-desktop {
@@ -275,7 +257,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 @media (max-width: 768px) {
-  .hero-desktop, .hero-animation-wrap, .hero-dark-wrap { display: none; }
+  .hero-desktop, .hero-animation-wrap { display: none; }
 }
 
 /* ── Three columns ── */
