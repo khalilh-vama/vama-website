@@ -206,17 +206,47 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .hero-centered { padding: 120px var(--px) 80px; background: #fff; display: flex; flex-direction: column; align-items: center; text-align: center; }
 
 /* Hero animation wrap */
+.hero-dark-wrap {
+  background: #0a0a0a;
+  width: 100%;
+  margin-top: 48px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .hero-animation-wrap {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  margin: 48px auto 0;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0a0a0a;
-  border-radius: 24px;
-  padding: 48px 40px;
+  background: transparent;
+  border: none;
+  padding: 40px;
+}
+
+.hero-animation-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(0, 113, 238, 0.45) 0%,
+    rgba(0, 113, 238, 0.2) 30%,
+    rgba(0, 113, 238, 0.05) 60%,
+    transparent 75%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: glowpulse 4s ease-in-out infinite;
+}
+
+@keyframes glowpulse {
+  0%,100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
 }
 
 .hero-desktop {
@@ -225,10 +255,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow:
-    0 0 60px 20px rgba(0, 113, 238, 0.4),
-    0 0 120px 40px rgba(0, 113, 238, 0.2),
-    0 40px 80px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -248,7 +275,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 @media (max-width: 768px) {
-  .hero-desktop, .hero-animation-wrap { display: none; }
+  .hero-desktop, .hero-animation-wrap, .hero-dark-wrap { display: none; }
 }
 
 /* ── Three columns ── */
