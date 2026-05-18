@@ -1165,12 +1165,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   gap: 80px;
   align-items: center;
 }
-.msg-feature-reversed .msg-feature-inner {
-  direction: rtl;
-}
-.msg-feature-reversed .msg-feature-inner > * {
-  direction: ltr;
-}
 .msg-feature-h {
   font-size: 40px;
   font-weight: 700;
@@ -1225,6 +1219,25 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
 }
+.msg-openclaw-dark {
+  background: #1C1C1C;
+  border-top: none;
+  border-bottom: none;
+}
+.msg-openclaw-dark .msg-oc-h,
+.msg-openclaw-dark .section-eyebrow {
+  color: #fff;
+}
+.msg-openclaw-dark .msg-oc-body,
+.msg-openclaw-dark .msg-oc-feat-body {
+  color: #A3A3A3;
+}
+.msg-openclaw-dark .msg-oc-feat-title {
+  color: #fff;
+}
+.msg-openclaw-dark .msg-oc-feat-icon {
+  background: rgba(0, 113, 238, 0.2);
+}
 .msg-openclaw-inner {
   max-width: 1280px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr;
@@ -1250,7 +1263,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (max-width: 1024px) {
   .msg-feature-section { padding: 60px 24px; }
   .msg-feature-inner { grid-template-columns: 1fr; gap: 40px; }
-  .msg-feature-reversed .msg-feature-inner { direction: ltr; }
   .msg-feature-h { font-size: 30px; }
   .msg-pillars { padding: 0 24px 60px; }
   .msg-pillars-inner { grid-template-columns: 1fr; }
